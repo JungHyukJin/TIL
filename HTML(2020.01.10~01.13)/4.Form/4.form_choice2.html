@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--같은 이름으로 지정되어잇으면 하나만 선택이됨.-->
+    <form action="http://localhost/order.php">
+        <p>
+            <h1>색상</h1>
+            초록색: <input type="radio" name="" value="green">
+            검정색: <input type="radio" name="" value="black" check>
+            흰색: <input type="radio" name="" value="white">
+        </p>
+
+        <p>
+            <h1>색상2</h1>
+            초록색: <input type="radio" name="color2" id="">
+            검정색: <input type="radio" name="color2" id="" checked>
+            흰색: <input type="radio" name="color2" id="">
+        </p>
+
+        <p>
+            <h1>사이즈(다중선택)</h1>
+            95: <input type="checkbox" name="size" value="95">
+            100: <input type="checkbox" name="size" value="100">
+            105: <input type="checkbox" name="size" value="105" checked>
+        </p>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
