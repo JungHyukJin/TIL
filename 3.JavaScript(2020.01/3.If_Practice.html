@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Practice</title>
+</head>
+
+<body>
+
+  <h1><a href="index.html">WEB</a></h1>
+
+  <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+  ">
+
+  <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+  ">
+
+
+<!--위 조건 두가지를 if, else를 활용하여 합치기-->
+  <input id="nightToDay" type="button" value="night" onclick="
+  if (document.querySelector('#nightToDay').value == 'night'){
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    document.querySelector('#nightToDay').value = 'day';
+  } else {
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    document.querySelector('#nightToDay').value = 'night';
+  }
+    
+
+  ">
+  
+  <ol>
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+  </ol>
+
+<h2>JavaScript</h2>
+  <p>
+    JavaScript is ....................
+  </p>
+
+    <script>
+      
+
+    </script>
+
+
+
+</body>
+
+</html>
