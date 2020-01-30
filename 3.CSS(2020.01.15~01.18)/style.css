@@ -1,13 +1,12 @@
-<style>
     body{
       margin:0;
     }
 
-    a {
+    a{
       color:black;
       text-decoration: none;
     }
-
+    
     h1{
       font-size: 45px;
       text-align: center;
@@ -44,6 +43,4 @@
       h1{
         border-bottom: none;
       }
-    }
-
-  </style>
+    } 
