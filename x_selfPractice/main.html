@@ -8,7 +8,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
 
   <style>
-      
+      #symbol{
+        margin-left:10px;
+      }
+
+      #mainName{
+        font-style: italic;
+        font-size: 45px;
+      }
 
       body{
         background-color: #0079bf;
@@ -19,7 +26,6 @@
       #jb-container {
         text-align: center;
         width: 100%;
-        margin-left: 3%;
         
       }
       #jb-header {
@@ -38,7 +44,7 @@
         text-align: center;
         display: inline-block;
         width: 50%;
-        
+        padding-top: 40PX;
       }
       #jb-footer {
         text-align: center;
@@ -85,16 +91,18 @@
       }
       #email_btn{
         border-radius: 5px;
-        width: 376px;
+        width: 350px;
         height:54px;
         border: none;
         font-size: 1rem;
         padding-left: 10px;
         vertical-align: middle;
+        margin-left: 1%;
 
       }
       #e_s_btns{
-        
+        text-align: left;
+        width: 85%;
         display: inline-block;
 
       }
@@ -103,16 +111,13 @@
         }
 
       
-      #a{
-        padding: 0;
-      }
 
       
 
 
 
 
-      @media ( max-width: 990px ) {
+      @media (max-width: 990px ) {
         #jb-container {
           width: auto;
           display: flex;
@@ -131,36 +136,65 @@
           order: 3;
         }
         #e_s_btns{
-        
-        display: inline-block;
-        order: 2;
+          text-align: center;
+          display: inline-block;
+          order: 2;
         }
         #side_img{
           width: 100%;
         }
+
         
-        
+        #email_btn{
+          width: auto;
+        }
+
+        #signUp_btn{
+          width: auto;
+        }
+        #intro1{
+          text-align: center;
+        }
+        #intro2{
+          text-align: center;
+        }  
+      }
+
+      @media (max-width: 600px ) {
+        #e_s_btns{
+        text-align: left;
+        width: 120%;
+        display: inline-block;
+        }
+        #intro1{
+          text-align: center;
+        }
+        #intro2{
+          text-align: center;
+        }
       }
 
   </style>
 </head>
+
 <body>
     <div id="jb-header">
-      Trello
+      <a href="main.html" style="text-decoration: none; color: white;"><i id="symbol" class="far fa-copy fa-3x"></i></a>
+      <a href="main.html" style="text-decoration: none; color: white;"><span id="mainName">Trello</span></a>
       <input class="mainBtns" id="m_btn1" type="button" value="Sign Up" style="margin-right:15px;">
       <input class="mainBtns" id="m_btn2" type="button" value="Log In">
     </div>
 
 
-  <div id="a" style='width: 90%; margin: auto;'>
+  <div id="jb-container2" style='width: 90%; margin: auto;'>
 
 
     <div id="jb-container">
       <div style="text-align:left;" id="jb-content">
-        <p style="margin-bottom:0; font-size: 45px;">Trello lets you work
+        <p id="intro1" style="margin-bottom:0; font-size: 45px;">Trello lets you work
           more collaboratively
           and get more done.</p>
-        <p style="margin-top:21px; font-size: 25px;">Trello’s boards, lists, and cards enable 
+        <p id="intro2" style="margin-top:21px; font-size: 25px;">Trello’s boards, lists, and cards enable 
           you to organize and prioritize your 
           projects in a fun, flexible, and 
           rewarding way.</p>
@@ -173,10 +207,12 @@
         <img id="side_img" src="https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/images/308998dcb3ed5ab3d01217a4d24ffa03/hero-a.svg">
       </div>
 
-      <form style='float:left;' id="e_s_btns" action="">
-        <input id="email_btn" type="email" placeholder="Email">
-        <input id="signUp_btn" style="font-size: 25px;" type="button" value="Sign Up - It's Free!" id="">
-      </form>
+      <div id="e_s_btns">
+        <form  action="">
+          <input id="email_btn" type="email" placeholder="Email">
+          <input id="signUp_btn" style="font-size: 25px;" type="button" value="Sign Up - It's Free!" id="">
+        </form>
+      </div>
 
     </div>
 
