@@ -1,0 +1,186 @@
+
+    #symbol {
+      margin-left: 10px;
+    }
+
+    #mainName {
+      font-style: italic;
+      font-size: 45px;
+    }
+
+    body {
+      background-color: #0079bf;
+      color: white;
+      font-family: jaf-facitweb, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    #jb-container {
+      text-align: center;
+      width: 100%;
+
+    }
+
+    #jb-header {
+      margin-bottom: 20px;
+
+    }
+
+    #jb-content {
+      vertical-align: middle;
+      display: inline-block;
+      text-align: center;
+      width: 33%;
+      margin-bottom: auto;
+    }
+
+    #jb-sidebar {
+      vertical-align: middle;
+      text-align: center;
+      display: inline-block;
+      width: 50%;
+      padding-top: 40PX;
+    }
+
+    #jb-footer {
+      text-align: center;
+      padding: 20px;
+
+    }
+
+    .mainBtns {
+      margin-top: 14px;
+      float: right;
+      width: 100px;
+      height: 30px;
+      font-size: 20px;
+    }
+
+    #m_btn2 {
+      background-color: #0079bf;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    #m_btn2:hover {
+      text-decoration: underline;
+    }
+
+    #m_btn1 {
+      background-color: white;
+      border: none;
+      color: #0079bf;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    #signUp_btn {
+      background-color: #61bd4f;
+      color: white;
+      border-radius: 5px;
+      width: 264px;
+      height: 54px;
+      border: none;
+      cursor: pointer;
+      vertical-align: middle;
+    }
+
+    #signUp_btn:hover {
+      background-color: #4b9e3b;
+      ;
+    }
+
+    #email_btn {
+      border-radius: 5px;
+      width: 350px;
+      height: 54px;
+      border: none;
+      font-size: 1rem;
+      padding-left: 10px;
+      vertical-align: middle;
+      margin-left: 1%;
+
+    }
+
+    #e_s_btns {
+      text-align: left;
+      width: 85%;
+      display: inline-block;
+
+    }
+
+    #side_img {
+      width: 80%;
+    }
+
+
+
+
+
+
+
+
+    @media (max-width: 990px) {
+      #jb-container {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+      }
+
+      #jb-content {
+        float: none;
+        width: auto;
+        order: 1;
+      }
+
+      #jb-sidebar {
+        float: none;
+        width: 100%;
+        order: 3;
+      }
+
+      #e_s_btns {
+        text-align: center;
+        display: inline-block;
+        order: 2;
+      }
+
+      #side_img {
+        width: 100%;
+      }
+
+
+      #email_btn {
+        width: auto;
+      }
+
+      #signUp_btn {
+        width: auto;
+      }
+
+      #intro1 {
+        text-align: center;
+      }
+
+      #intro2 {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      #e_s_btns {
+        text-align: left;
+        width: 120%;
+        display: inline-block;
+      }
+
+      #intro1 {
+        text-align: center;
+      }
+
+      #intro2 {
+        text-align: center;
+      }
+    }
