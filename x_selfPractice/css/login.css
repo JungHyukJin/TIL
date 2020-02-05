@@ -1,16 +1,11 @@
-html{
-    font-weight: 300;
-    background-color: #F9FAFC;
-}
 #loginLogo{
     width: 140px;
     display: block;
     margin: auto;
     margin-top: 40px;
     margin-bottom: 40px;
-}
-
-.layout{
+  }
+  .layout{
     background-color: white;
     border: 1px solid grey;
     height: auto;
@@ -19,16 +14,16 @@ html{
     margin: auto;
     text-align: center;
     padding-top: 25px;
-    padding-left: auto;
+    padding-left: 40px auto;
     border: 1px solid #DFE1E6;
     font-size: 14px;
     border-radius: 3px;
-}
-.footer{
+  }
+  .footer{
     border: 1px solid grey;
     width:100%
-}
-#Email_Id{
+  }
+  #Email_Id{
     width: 300px;
     height: 30px;
     background-color: #fafbfc;
@@ -38,8 +33,8 @@ html{
     border: 2px solid #DFE1E6;
     border-radius: 3px;
 
-}
-#Email_Password{
+  }
+  #Email_Password{
     width: 300px;
     height: 30px;
     background-color: #fafbfc;
@@ -48,8 +43,8 @@ html{
     margin-bottom: 16.8px;
     border: 2px solid #DFE1E6;
     border-radius: 3px;
-}
-#login_button{
+  }
+  #login_button{
     background-color: #5aac44;
     width: 320px;
     height: 35px;
@@ -58,8 +53,8 @@ html{
     font-weight: bold;
     color: white;
     text-decoration: none
-}
-#googleLogin_btn{
+  }
+  #googleLogin_btn{
     background-color: white;
     width: 320px;
     height: 44px;
@@ -67,33 +62,33 @@ html{
     color:#505f79;
     border: 1px solid #DFE1E6;
     border-radius: 3px;
-}
-#login_button:hover{
+  }
+  #login_button:hover{
     cursor: pointer;
     background-color:#61BD4F;
-}
-#googleLogin_btn:hover{
+  }
+  #googleLogin_btn:hover{
     cursor: pointer;
     background-color: #f9fafc;
-}
-.help_login{
+  }
+  .help_login{
     text-decoration: none;
-}
+  }
 
-.help_login:hover{
+  .help_login:hover{
     text-decoration: underline; color: blue;
-}
+  }
 
-.help_service{
+  .help_service{
     text-decoration: none;
     color:#0052cc;
     font-size: 12px;
-}
+  }
 
-.help_service:hover{
+  .help_service:hover{
     text-decoration: underline; color:blue;
-}
-.options{
+  }
+  .options{
     background-color: #fafbfc;
     font: inherit;
-}
+  }
