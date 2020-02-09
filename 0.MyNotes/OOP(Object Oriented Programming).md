@@ -59,7 +59,7 @@
 - 구현하고자 하는 프로그램이 어떤 종류의 객체들로 구성되는지 파악
   - 객체들의 데이터파악
     - 이들이 데이터를 가지고 수행하는 연산이 무엇인지 파악
--  ![dataAbstraction](2.OOP(Object Oriented Programming).assets/dataAbstraction.jpg)
+-  ![dataAbstraction](OOP(Object Oriented Programming).assets/dataAbstraction.jpg)
 - abstract 클래스, abstract 메소드와는 다름)
 
 ---
