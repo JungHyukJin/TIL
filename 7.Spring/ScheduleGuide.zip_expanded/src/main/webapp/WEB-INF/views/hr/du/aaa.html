@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>일정관리</title>
+    <style type="text/css">
+
+        body {
+          font-family:'고딕체';
+          font-size:20pt;
+        }
+        
+        </style>
+
+</head>
+
+<body>
+    
+    <div id="add-event-form" title="일정등록">
+            <p class="validateTips">일정을 입력하세요.</p>
+            <form>
+            <fieldset>
+                <label for="calcal">개인/공식 일정</label>
+                <select id="calcal" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;">
+                                <option value="private" SELECTED>개인일정</option>
+                                <option value="public">공식일정</option>
+                <label for="name">일정내용</label>
+                <input type="text" name="what" id="what" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;"/>
+                <table style="width:100%; padding:5px;"><br/>
+                    <form>
+                        메모 <br/>
+                        <textarea name = "ta1" rows = "7" cols = "40" wrap = "virtual" placeholder="원하는 내용을 입력해 주세요"></textarea>
+                    </form>
+
+                    <tr>
+                        <td>
+                            <label>시작하는 날</label>
+                            <input type="text" name="startDate" id="startDate" value="" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;"/>                
+                        </td>
+                        <td>&nbsp;</td>
+                        <td>
+                            <label>시</label>
+                            <select id="startHour" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;">
+                                <option value="12" SELECTED>12</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                            </select>               
+                        <td>
+                        <td>
+                            <label>분</label>
+                            <select id="startMin" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;">
+                                <option value="00" SELECTED>00</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="40">40</option>
+                                <option value="50">50</option>
+                            </select>               
+                        <td>
+                        <td>
+                            <label>AM/PM</label>
+                            <select id="startMeridiem" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;">
+                                <option value="AM" SELECTED>AM</option>
+                                <option value="PM">PM</option>
+                            </select>               
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>끝나는 날</label>
+                            <input type="text" name="endDate" id="endDate" value="" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;"/>                
+                        </td>
+                        <td>&nbsp;</td>
+                        <td>
+                            <label>시</label>
+                            <select id="endHour" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;">
+                                <option value="12" SELECTED>12</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                            </select>               
+                        <td>
+                        <td>
+                            <label>분</label>
+                            <select id="endMin" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;">
+                                <option value="00" SELECTED>00</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="40">40</option>
+                                <option value="50">50</option>
+                            </select>               
+                        <td>
+                        <td>
+                            <label>AM/PM</label>
+                            <select id="endMeridiem" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;">
+                                <option value="AM" SELECTED>AM</option>
+                                <option value="PM">PM</option>
+                            </select>               
+                        </td>               
+                    </tr>           
+                </table>
+                <div class="article category" style="display: block;">
+						<span class="tit">범주</span>
+						<div class="cont">
+							<a href="javascript:void(0);" class="btn_sy edit_category">범주 수정<span class="ico d_arrow2"></span></a>
+							<ul class="category_lst">
+                                    <a href="bbb.html" onclick="window.open(this.href, 'new', 'width=500px, height=200px, toolbars=no, scrollbars=no'); return false;">완전 간단하게 팝업 띄우기!!</a>
+
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-default" value="">확 인</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="reset" class="btn btn-default" value="">초기화</button>         
+        
+            </form>
+        </div>
+</body>
+
+</html>

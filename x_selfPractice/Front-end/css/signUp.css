@@ -1,0 +1,110 @@
+#loginLogo{
+  width: 140px;
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.layout{
+  background-color: white;
+  border: 1px solid grey;
+  height: auto;
+  max-width: 400px;
+  height: 380px;
+  margin: auto;
+  text-align: center;
+  padding-top: 25px;
+  border: 1px solid #DFE1E6;
+  font-size: 14px;
+  border-radius: 3px;
+}
+.footer{
+  border: 1px solid grey;
+  width:100%
+}
+#Email_Id{
+  width: 300px;
+  height: 30px;
+  background-color: #fafbfc;
+  padding: 7px;
+  font: inherit;
+  margin-bottom: 16.8px;
+  border: 2px solid #DFE1E6;
+  border-radius: 3px;
+
+}
+#Email_Password{
+  width: 300px;
+  height: 30px;
+  background-color: #fafbfc;
+  padding: 7px;
+  font: inherit;
+  margin-bottom: 16.8px;
+  border: 2px solid #DFE1E6;
+  border-radius: 3px;
+}
+#signUp_button{
+  background-color: #e2e4e6;
+  width: 320px;
+  height: 35px;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  color: hsl(0,0%,55%);
+  text-decoration: none
+}
+#googleLogin_btn{
+  background-color: white;
+  width: 320px;
+  height: 44px;
+  font-weight: bold;
+  color:#505f79;
+  border: 1px solid #DFE1E6;
+  border-radius: 3px;
+}
+#signUp_button:hover{
+  cursor: pointer;
+  background-color:#61BD4F;
+  color: white;
+}
+#googleLogin_btn:hover{
+  cursor: pointer;
+  background-color: #f9fafc;
+}
+.help_login{
+  text-decoration: none;
+}
+
+.help_login:hover{
+  text-decoration: underline; color: blue;
+}
+
+.help_service{
+  text-decoration: none;
+  color:#0052cc;
+  font-size: 12px;
+}
+
+.help_service:hover{
+  text-decoration: underline; color:blue;
+}
+.options{
+  background-color: #fafbfc;
+  font: inherit;
+}
+.aboutUs{
+  text-decoration: none;
+}
+
+.aboutUs:hover{
+  text-decoration: underline; color: #0052cc;
+}
+
+.readAccept{
+  text-decoration: none;
+}
+
+.readAccept:hover{
+  text-decoration: underline; color: #0052cc;
+}
+
