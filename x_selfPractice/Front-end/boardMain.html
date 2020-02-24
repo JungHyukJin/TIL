@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+<style>
+    body{
+        margin:0;
+    }
+    header{
+        background-color: #026aa7;
+    }
+    .topNav{
+        height: 35px;
+        text-align: center;
+    }
+    #value{
+        background-color: #4E97C2;
+        height: 20px;
+        border: 0px;
+        padding:0px;
+        border-radius: 5px;
+        padding-left: 10px;  
+        color: white;
+    }
+    .homeBtn{
+        border: #026aa7; 
+        border-radius: 5px; 
+        background-color:#4E97C2; 
+        width: 35px; 
+        height: 30px;
+    }
+    .BoardBtn{
+        border: #026aa7; 
+        border-radius: 5px; 
+        background-color:#4E97C2; 
+        width: 87px; 
+        height: 30px;
+    }
+    .BoardBtn:hover{
+        cursor: pointer;
+        background-color:#3588B9
+    }
+    .homeBtn:hover{
+        cursor: pointer;
+        background-color:#3588B9
+    }
+    #trelloLogo{
+        opacity: .7; 
+        display: inline-block; 
+        vertical-align: middle;
+    }
+    #trelloLogo:hover{
+        cursor: pointer;
+        opacity: 1;
+    }
+    .searchBtn{
+        background-color: #4E97C2;
+        border: 0px;
+        padding:0px;
+        height: 30px;
+        border-radius: 5px;
+        padding-right: 8px; font-size: 15px; color: white;
+    }
+    .searchBtn:hover > #value{
+        cursor: pointer;
+        background-color: #67A6CA;
+    }
+    .searchBtn:hover{
+        cursor: pointer;
+        background-color: #67A6CA;
+    }
+    #value:hover{
+        background-color: #67A6CA;
+    }
+    
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="topNav">
+            <button class="homeBtn">
+            <div style="vertical-align: middle; display: inline-block; color: white;">
+                <i class="fas fa-home" style="font-size: 15px;"></i>
+            </div>
+            </button>
+
+            <button class="BoardBtn">
+                <div style="vertical-align: middle; display: inline-block; color: white;">
+                    <i class="fas fa-chalkboard" style="padding-right: 5px; font-size: 15px;"></i>
+                    Boards
+                </div>
+            </button>
+
+            <button class="searchBtn">
+                    <input onkeyup="filter()" type="text" id="value">
+                    <i class="fas fa-search"></i>
+            </button>
+            
+            <div id="trelloLogo">
+            <img src="https://a.trellocdn.com/prgb/dist/images/header-logo-2x.01ef898811a879595cea.png" 
+            width="80px" height="30px">
+            </div>
+
+
+
+        </div>
+        <div>
+
+
+        </div>
+    </header>
+    
+</body>
+</html>
