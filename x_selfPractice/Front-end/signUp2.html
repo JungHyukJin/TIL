@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Clone_SignUp</title>
-  <link rel="stylesheet" href="css/signUp.css">
+  <title>Clone_SignUp2</title>
+  <link rel="stylesheet" href="css/signUp2.css">
 
   <style>
     body {
@@ -35,23 +35,28 @@
         <h1 style="color:#526c84;; font-size: 16px; margin-top: 15px; margin-bottom: 25px;">
           Sign up for your account
         </h1>
-        <input id="Email_Id" type="email" placeholder="Enter email">
+        <input id="Email_Id" type="email" placeholder="Enter email address" autocomplete="off" required>
+        <input id="Email_Id" type="" placeholder="Enter full name" autocomplete="off" required>
+        <input id="Email_Id" type="password" placeholder="Ceate password" autocomplete="off" required>
         <div style="text-align: left; padding-left: 42px; padding-right: 31px; padding-bottom: 15px; font-size: 12px; color: gray;">
-          By signing up, you confirm that you've read and accepted our
-          <a class="readAccept" href="" style="color:#0052cc">Terms of Service</a> and 
+          By signing up, I accept the Atlassian 
+          <a class="readAccept" href="" style="color:#0052cc">User Notice</a> and acknowledge the 
           <a class="readAccept" href="" style="color:#0052cc">Privacy Policy</a>
-        </div>        
-        
-        <button id="signUp_button" type="button" onclick="location.href='signUp2.html'">Continue</button>
-        
+        </div>
+        <button id="signUp_button" type="submit"> Sign up </button>
+
         <div style="margin: 10px; font-size: 12px;">
           OR
         </div>
 
         <div>
-          <button id="googleLogin_btn" type="submit">
+          <button id="googleLogin_btn" type="submit" style="margin-bottom: 10px;">
             <img src="img/google_icon.png" style="vertical-align: middle;">
             Continue with Google
+          </button>
+          <button id="microsoftLogin_btn" type="submit">
+            <img src="https://aid-frontend.prod.atl-paas.net/atlassian-id/front-end/5.0.97/static/media/microsoft-logo.319d9b9a.svg" style="vertical-align: middle;">
+            Continue with Microsoft
           </button>
         </div>
         <hr style="margin-left: 10%; margin-right: 10%; margin-top: 25px;">
@@ -68,16 +73,7 @@
 
     </div>
 
-    <div style="text-align: center; margin-top: 50px;">
-      <select style="width: 150px; height: 38px; border: 2px solid #DFE1E6;
-                        border-radius: 3px; background-color: #fafbfc; color:grey">
-        <option style="color:grey" class="options" value="English">English</option>
-        <option style="color:grey" class="options" value="Korean">한국어</option>
-        <option style="color:grey" class="options" value="Chinese">汉语</option>
-      </select>
-
-      <hr style="width: 400px; margin-top: 25px; margin-bottom: 15px;">
-    </div>
+    
     <img id="img1" src="img/trello_login2.png" style="position: absolute; right: 0px; bottom: 0px">
     <img id="img2" src="img/trello_login1.png" style="position: absolute; left: 0px; bottom: 0px">
 
