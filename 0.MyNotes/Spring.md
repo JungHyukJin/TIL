@@ -106,9 +106,9 @@
 
 ---
 
-![StructureOfSpringFramework](3.AboutSpring.assets/StructureOfSpringFramework.PNG)
+![StructureOfSpringFramework](Spring.assets/StructureOfSpringFramework.PNG)
 
-![DirectionsOfSpringFramework](3.AboutSpring.assets/DirectionsOfSpringFramework.PNG)
+![DirectionsOfSpringFramework](Spring.assets/DirectionsOfSpringFramework.PNG)
 
 ---
 
@@ -121,5 +121,3 @@
 # 출처:
 
 > https://asfirstalways.tistory.com/ 
-
-자세한 설명 감사합니다! : ] 
