@@ -1,1 +1,7 @@
-console.log('Im Working. Im JS. Im worth it!');
+const title = document.querySelector("#title");
+
+function handleClick() {
+  title.style.color = "black";
+}
+
+title.addEventListener("click", handleClick);
