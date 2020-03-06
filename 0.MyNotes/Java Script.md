@@ -20,3 +20,5 @@
 
 
 
+- JSON (JavaScript Object Notation)
+  - 데이터를 전달할 때, 자바스크립트가 다룰 수 있도록 object로 변환 해주거나, object를 string으로 변환 해주는 기능.
