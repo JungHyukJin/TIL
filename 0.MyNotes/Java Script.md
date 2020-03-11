@@ -14,11 +14,61 @@
 
 - Local Storage
   - 작은 정보를 유저 컴퓨터에 저장하는 방법
-  - 
+  
 
+  
 - DOM (Document Object Model)
 
 
 
 - JSON (JavaScript Object Notation)
   - 데이터를 전달할 때, 자바스크립트가 다룰 수 있도록 object로 변환 해주거나, object를 string으로 변환 해주는 기능.
+
+
+
+
+
+### "Parameter"와 "인자"의 차이!!?
+
+```js
+function plus(a, b){
+ return a + b;
+}
+```
+
+파라미터는 함수에서 받아오는 값!
+
+
+
+```js
+const result = plus(1,2);
+```
+
+인자는 함수를 사용할 때 넣어주는 값!
+
+
+
+### Hoisting 이란?
+
+> 자바스크립에서 아직 선언되지 않은 함수 또는 변수를 끌어 올려서 사용할 수 있는 
+>
+> 자바스크립트의 작동 방식.
+
+```js
+myFunction();
+
+//a
+
+function myFunction(){
+	console.log('Hello World');
+}
+```
+
+```
+Hello world 라는 결과물이 나옴.
+```
+
+> 하지만,  a 위치에 다른 함수들이나 변수가 들어가면, 코드가 헷갈릴 수 있고, 유지보수가 어려워진다! 의도치 않은 결과물이 나올 수도 있다!
+>
+> 웬만하면 피하라!
+
