@@ -1,0 +1,28 @@
+ .nav {
+   position: fixed;
+   width: 100%;
+   padding: 20px 30px;
+   top: 30px;
+   left: 0px;
+ }
+
+ .nav {
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .nav .nav__title {
+   font-size: 30px;
+   font-weight: bold;
+ }
+
+ .nav .nav__icon {
+   font-size: 25px;
+   margin-left: 25px;
+   cursor: pointer;
+ }
+
+ .nav .nav__nav-column {
+   display: flex;
+   align-items: center;
+ }
