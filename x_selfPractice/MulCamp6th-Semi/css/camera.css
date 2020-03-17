@@ -1,0 +1,43 @@
+input[type="file"] {
+  display: none;
+}
+
+.img__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 90px 25px;
+}
+
+.img__container .container {
+  border: 5px dashed wheat;
+  border-radius: 20px;
+  width: 50%;
+  height: 300px;
+  overflow: hidden;
+}
+
+#select {
+  background-color: #ffdd59;
+  width: 30px;
+  height: 50px;
+  border-radius: 20px;
+  outline: none;
+  font-size: 20px;
+}
+
+#upload {
+  background-color: #ffa801;
+  overflow: hidden;
+  width: 50px;
+  height: 100px;
+  border-radius: 20px;
+  outline: none;
+  font-size: 20px;
+}
+
+#selected-img {
+  display: none;
+  height: 100%;
+}

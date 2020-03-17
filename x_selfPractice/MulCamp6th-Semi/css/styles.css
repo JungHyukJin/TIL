@@ -1,1 +1,8 @@
+@import "reset.css";
 @import "loading.css";
+@import "error.css";
+@import "camera.css";
+
+* {
+  box-sizing: border-box;
+}
