@@ -3,6 +3,7 @@
 @import "status-bar.css";
 @import "nav-bar.css";
 @import "login.css";
+@import "menu-bar.css";
 
 body {
   padding: 10px 20px;

@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+/********************  Loading Page ************************/
+.loadFont {
+  font-family: 'Poiret One', cursive;
+}
+
+/* Progress Bar Placement & Styling */
+#progressive {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+}
+
+/* Transition speed for progress bar */
+.six-sec-ease-in-out {
+  -webkit-transition: width 6s ease-in-out;
+  -moz-transition: width 6s ease-in-out;
+  -ms-transition: width 6s ease-in-out;
+  -o-transition: width 6s ease-in-out;
+  transition: width 6s ease-in-out;
+}
+
+#shadow {
+  border-radius: 10px;
+
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
