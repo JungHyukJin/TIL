@@ -4,10 +4,30 @@
 @import "camera.css";
 @import "result.css";
 
+@font-face {
+  font-family: RemachineScript_Personal_Use;
+  src: url('/fonts/RemachineScript_Personal_Use.ttf');
+}
+
+@font-face {
+  font-family: omniGothic;
+  src: url('/fonts/omniGothic.ttf');
+}
+
 * {
   box-sizing: border-box;
+  font-family: RemachineScript_Personal_Use;
 }
 
 body {
   background-color: #f2f2f2;
+}
+
+header {
+  z-index: -1;
+  text-align: center;
+  font-size: 100px;
+  font-family: RemachineScript_Personal_Use;
+  margin-top: 50px;
+  margin-bottom: 0px;
 }
