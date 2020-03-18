@@ -12,32 +12,59 @@ input[type="file"] {
 
 .img__container .container {
   border: 5px dashed wheat;
-  border-radius: 20px;
+  border-radius: 100px;
   width: 50%;
   height: 300px;
   overflow: hidden;
 }
 
+
 #select {
-  background-color: #ffdd59;
-  width: 30px;
-  height: 50px;
-  border-radius: 20px;
+  /* background-color: #ffdd59; */
+  background-color: salmon;
+  border: salmon;
+  width: 100px;
+  height: 280px;
+  border-radius: 30px;
   outline: none;
   font-size: 20px;
+  font-weight: 700;
+  padding: 10px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
 #upload {
-  background-color: #ffa801;
+  background-color: cadetblue;
+  border: cadetblue;
   overflow: hidden;
-  width: 50px;
-  height: 100px;
-  border-radius: 20px;
+  width: 100px;
+  height: 280px;
+  border-radius: 30px;
   outline: none;
   font-size: 20px;
+  font-weight: 700;
+  padding: 10px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.5s cubic-bezier(.25, .8, .25, 1);
+}
+
+#select:hover {
+  cursor: pointer;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+}
+
+#upload:hover {
+  cursor: pointer;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 #selected-img {
   display: none;
   height: 100%;
+}
+
+label:hover {
+  cursor: pointer;
 }
