@@ -1,5 +1,5 @@
 #error__body {
-  margin-top: 200px;
+  margin-top: 110px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +46,6 @@ p {
   border: 3px solid #c7ecee;
   background-color: #c7ecee;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-
 }
 
 .loading {
