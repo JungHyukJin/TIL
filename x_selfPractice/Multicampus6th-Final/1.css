@@ -76,6 +76,7 @@ main small {
   background: #000;
 }
 
+
 #nav-container:focus-within .bg {
   visibility: visible;
   opacity: .6;

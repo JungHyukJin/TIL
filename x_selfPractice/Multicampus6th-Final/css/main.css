@@ -1,0 +1,14 @@
+.main__header {
+  border: solid 2px black;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-style: inherit;
+  text-transform: uppercase;
+  padding: 5px;
+}
+
+.app-name {
+  font-size: 25px;
+}

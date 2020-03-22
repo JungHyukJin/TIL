@@ -1,9 +1,9 @@
 .result__body {
-  font-family: RemachineScript_Personal_Use;
+  font-family: 'Love Ya Like A Sister', cursive;
 }
 
 .header__name {
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .result__container {
@@ -15,21 +15,21 @@
 }
 
 .result__container .container {
-  border: 5px solid slategray;
-  border-radius: 100px;
-  width: 60%;
-  height: 300px;
+  border: 10px solid slategray;
+  border-radius: 30px;
+  width: 1700px;
+  height: 400px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(24, 13, 13, 0.4), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 20px 15px rgba(24, 13, 13, 0.4), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .result__info {
-  width: 700px;
-  font-size: 50px;
+  width: 1300px;
+  font-size: 60px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  vertical-align: middle;
 }
 
 #result-back-btn {
@@ -37,17 +37,51 @@
   background-color: #dff9fb;
   border-radius: 10px;
   border: 3px solid #dff9fb;
-  font-size: 17px;
-  width: 250px;
-  height: 40px;
+  font-size: 25px;
+  width: 350px;
+  height: 60px;
   outline: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 10px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
 #result-back-btn:hover {
   cursor: pointer;
-  border: 3px solid #c7ecee;
+  border: 5px solid #c7ecee;
   background-color: #c7ecee;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 30px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.info {
+  margin-top: 30px;
+}
+
+.result__body {
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#result-back__link {
+  animation: fadein 1s;
+  animation-duration: 3s;
+}
+
+@keyframes fadein {
+  from {
+    margin-bottom: -100px;
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

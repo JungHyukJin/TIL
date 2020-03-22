@@ -1,13 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister&display=swap');
 @import "reset.css";
 @import "loading.css";
 @import "error.css";
 @import "main.css";
 @import "result.css";
-
-@font-face {
-  font-family: RemachineScript_Personal_Use;
-  src: url('/fonts/RemachineScript_Personal_Use.ttf');
-}
 
 @font-face {
   font-family: omniGothic;
@@ -16,18 +13,15 @@
 
 * {
   box-sizing: border-box;
-  font-family: RemachineScript_Personal_Use;
 }
 
 body {
   background-color: #f2f2f2;
+  font-family: 'Love Ya Like A Sister', cursive;
 }
 
 header {
-  z-index: -1;
   text-align: center;
   font-size: 100px;
-  font-family: RemachineScript_Personal_Use;
-  margin-top: 50px;
-  margin-bottom: 0px;
+  margin-top: 30px;
 }

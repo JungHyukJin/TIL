@@ -4,67 +4,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Main</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+  <title>Document</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
 
 </head>
 
-
-<body>
-  <div class="status-bar">
-    <div class="status-bar__column">
-      <div class="clock" style="display: flex;">
-        <span>KT</span>
-        <h1>clock</h1>
+<body class="main__page">
+  <header class="main__header">
+    <div class="nav__container">
+      <div class="bg"></div>
+      <div class="button">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </div>
-    </div>
-    <div class="status-bar__column">
-      <i class="fas fa-clock"></i>
-      <i class="fas fa-volume-mute"></i>
-      <i class="fas fa-wifi"></i>
-      <span class="status-bar__battery-level">100%</span>
-      <i class="fas fa-battery-full"></i>
-    </div>
-  </div>
-
-  <nav class="nav">
-    <div class="nav__nav-column">
-      <div id="menu_button">
-        <input type="checkbox" id="menu_checkbox">
-        <label for="menu_checkbox" id="menu_label">
-          <div id="menu_text_bar">1</div>
-          <div id="menu_text_bar">2</div>
-          <div id="menu_text_bar">3</div>
-          <div id="menu_text_bar">4</div>
-        </label>
+      <div class="nav__content">
+        <ul>
+          <li><a href="main.html">Home</a></li>
+          <li><a href="guide.html">서비스 사용법</a></li>
+          <li><a href="search.html">레시피 검색</a></li>
+          <li><a href="bookMark.html">나의 레시피</a></li>
+          <li><a href="users.html">사용자 설정</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
-      <a href="main.html">
-        <h1 class="nav__title">오늘 뭐 해먹지?</h1>
-      </a>
+      <!--nav__content-end-->
     </div>
-    <div class="nav__nav-column">
-      <span class="nav__icon">
-        <a href="search.html">
-          <i class="fas fa-search"></i>
-        </a>
+    <!--nav__container-end-->
+    <a class="app-name" href="main.html">
+      오늘 뭐 해먹지?
+    </a>
+    <div class="shortcut__icons">
+      <span>
+        <i class="fas fa-search fa-2x"></i>
       </span>
-      <span class="nav__icon">
-        <a href="camera.html">
-          <i class="fas fa-camera-retro"></i>
-        </a>
+      <span>
+        <i class="far fa-bookmark fa-2x"></i>
       </span>
-      <span class="nav__icon">
-        <a href="login.html">
-          <i class="far fa-user"></i>
-        </a>
+      <span>
+        <i class=" far fa-user fa-2x"></i>
       </span>
     </div>
-  </nav>
+    <!--shortcut__icons-end-->
+
+  </header>
 
 
-  <script src="bg.js"></script>
-  <script src="clock.js"></script>
 </body>
 
 </html>
