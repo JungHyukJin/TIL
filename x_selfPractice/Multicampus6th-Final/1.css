@@ -82,6 +82,7 @@ main small {
   opacity: .6;
 }
 
+
 #nav-container * {
   visibility: visible;
 }
@@ -91,8 +92,6 @@ main small {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: 1;
-  -webkit-appearance: none;
   border: 0;
   background: transparent;
   border-radius: 0;
@@ -101,8 +100,6 @@ main small {
   cursor: pointer;
   pointer-events: auto;
   margin-left: 25px;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .icon-bar {
@@ -117,9 +114,11 @@ main small {
   margin-top: 5px;
 }
 
+
 #nav-container:focus-within .button {
   pointer-events: none;
 }
+
 
 #nav-container:focus-within .icon-bar:nth-of-type(1) {
   transform: translate3d(0, 8px, 0) rotate(45deg);

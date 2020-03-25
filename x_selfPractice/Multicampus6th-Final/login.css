@@ -1,0 +1,63 @@
+.layout {
+  height: auto;
+  max-width: 400px;
+  height: 400px;
+  margin: auto;
+  text-align: center;
+  padding-top: 55px;
+  padding-left: 40px auto;
+  font-size: 14px;
+}
+
+#Email_Id {
+  width: 320px;
+  height: 40px;
+  padding: 7px;
+  font: inherit;
+  margin-bottom: 16.8px;
+  border: 2px solid #DFE1E6;
+  border-radius: 10px;
+}
+
+#Email_Password {
+  width: 320px;
+  height: 40px;
+  padding: 7px;
+  font: inherit;
+  margin-bottom: 16.8px;
+  border: 2px solid #DFE1E6;
+  border-radius: 10px;
+}
+
+#login_button {
+  background-color: #e84393;
+  width: 320px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 16.8px;
+  font: inherit;
+}
+
+#googleLogin_btn {
+  background-color: white;
+  width: 320px;
+  height: 40px;
+  color: #505f79;
+  border: 1px solid #DFE1E6;
+  border-radius: 10px;
+  font: inherit;
+}
+
+#login_button:hover {
+  cursor: pointer;
+  background-color: #fd79a8;
+}
+
+#googleLogin_btn:hover {
+  cursor: pointer;
+  /* background-color: #f9fafc; */
+  background-color: #ecf0f1;
+}

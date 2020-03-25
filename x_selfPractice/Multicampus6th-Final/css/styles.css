@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Poor+Story&display=swap&subset=korean');
+
+
 @import "reset.css";
 @import "main.css";
 
-
 * {
-  box-sizing: border-box;
-}
-
-body {
   font-family: 'Poor Story', cursive;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }

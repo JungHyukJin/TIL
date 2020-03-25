@@ -5,53 +5,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-
-
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <style>
+    footer {
+      background-color: black;
+      /* background: black; */
+    }
+  </style>
 </head>
 
-<body class="main__page">
-  <header class="main__header">
-    <div class="nav__container">
-      <div class="bg"></div>
-      <div class="button">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+<body>
+  <div id='main__container'>
+    <header id="main__header">
+      <div id="nav-container" onclick="openNav()">
+        <div class="button" tabindex="0">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </div>
       </div>
-      <div class="nav__content">
-        <ul>
-          <li><a href="main.html">Home</a></li>
-          <li><a href="guide.html">서비스 사용법</a></li>
-          <li><a href="search.html">레시피 검색</a></li>
-          <li><a href="bookMark.html">나의 레시피</a></li>
-          <li><a href="users.html">사용자 설정</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+
+      <img class="main-logo" src="images/logo.png" alt="">
+
+      <!-- 우측 상단 메뉴 아이콘들 -->
+      <div class="nav__nav-column">
+        <span class="nav__icon">
+          <a href="#.html">
+            <!-- <i class="fas fa-search"></i> -->
+            Search
+          </a>
+        </span>
+        <span class="nav__icon">
+          <a href="#.html">
+            <!-- <i class="fas fa-camera-retro"></i> -->
+            Camera
+          </a>
+        </span>
+        <span class="nav__icon">
+          <a href="#">
+            <!-- <i class="far fa-user"></i> -->
+            Log In
+          </a>
+        </span>
+        <span class="nav__icon">
+          <a href="#">
+            Sign Up
+          </a>
+        </span>
       </div>
-      <!--nav__content-end-->
+      <!--end-- 우측 상단 메뉴 아이콘들 -->
+    </header>
+    <!--햄버거메뉴바 클릭-->
+    <div id="mySidenav" class="sidenav">
+      <a class=" closebtn" onclick="closeNav()">&times;</a>
+      <a class="nav-menu-1" href="#">HOME</a>
+      <a class="nav-menu-2" href="#">GUIDE</a>
+      <a class="nav-menu-3" href="#">SEARCH</a>
+      <a class="nav-menu-4" href="#">BOOMARK</a>
+      <a class="nav-menu-5" href="#">USER</a>
+      <a class="nav-menu-6" href="#">CONTACT</a>
     </div>
-    <!--nav__container-end-->
-    <a class="app-name" href="main.html">
-      오늘 뭐 해먹지?
-    </a>
-    <div class="shortcut__icons">
-      <span>
-        <i class="fas fa-search fa-2x"></i>
-      </span>
-      <span>
-        <i class="far fa-bookmark fa-2x"></i>
-      </span>
-      <span>
-        <i class=" far fa-user fa-2x"></i>
-      </span>
+    <!--end--햄버거메뉴바 클릭-->
+    <div id="main__story">
+      sssssssssssss
     </div>
-    <!--shortcut__icons-end-->
 
-  </header>
+    <footer id="main__footer">
+      @Copyright
+    </footer>
 
-
+  </div>
+  <script src="main.js"></script>
 </body>
 
 </html>
