@@ -1,0 +1,161 @@
+.login__layout {
+  /* border: 3px solid black; */
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: auto; */
+}
+
+.login__layout-form {
+  margin-top: 50px;
+  border-radius: 30px;
+  padding: 10px 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#login-form>input {
+  height: 50px;
+  /* width: 500px; */
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 15px;
+}
+
+#login-form>button {
+  height: 50px;
+  /* width: 500px; */
+  width: 100%;
+  min-width: 100px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+}
+
+#email-id {
+  border: none;
+  padding-left: 20px;
+  font-size: 20px;
+  background-color: aliceblue;
+}
+
+#email-password {
+  border: none;
+  padding-left: 20px;
+  font-size: 20px;
+  background-color: aliceblue;
+}
+
+#login-button {
+  border: none;
+  font-size: 25px;
+  background-color: salmon;
+}
+
+#login-button:hover {
+  cursor: pointer;
+  background-color: #ffb385;
+}
+
+input::placeholder {
+  color: rgb(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+#google-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: 25px;
+  background-color: lightskyblue;
+}
+
+#google-login-btn:hover {
+  cursor: pointer;
+  background-color: darkturquoise;
+}
+
+#password-find {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 22px;
+}
+
+#password-find:hover {
+  font-weight: bold;
+}
+
+#go-to-signUp {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+
+#go-to-signUp:hover {
+  font-weight: bold;
+}
+
+#password-find>a {
+  color: #3b6978;
+}
+
+#go-to-signUp>a {
+  color: #323edd;
+}
+
+#user-help {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media (max-width:580px) {
+  #login-form>input {
+    width: 390px;
+  }
+
+  #login-form>button {
+    width: 390px;
+  }
+
+  .login__layout {
+    width: 410px;
+    margin: auto;
+  }
+}
+
+/* 
+@media (max-width:420px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin: uto;
+  }
+
+  .login__layout-form {}
+
+  h1 {
+    font-size: 35px;
+  }
+
+
+} */

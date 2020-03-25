@@ -9,16 +9,15 @@
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <style>
-    footer {
-      background-color: black;
-      /* background: black; */
-    }
   </style>
 </head>
 
 <body>
+  <!--start--페이지 전체 컨테이너-->
   <div id='main__container'>
+    <!--start--헤더 고정-->
     <header id="main__header">
+      <!--start--햄버거메뉴-->
       <div id="nav-container" onclick="openNav()">
         <div class="button" tabindex="0">
           <span class="icon-bar"></span>
@@ -26,10 +25,11 @@
           <span class="icon-bar"></span>
         </div>
       </div>
+      <!--end--햄버거메뉴-->
 
       <img class="main-logo" src="images/logo.png" alt="">
 
-      <!-- 우측 상단 메뉴 아이콘들 -->
+      <!--start--우측 상단 메뉴 아이콘들 -->
       <div class="nav__nav-column">
         <span class="nav__icon">
           <a href="#.html">
@@ -55,9 +55,12 @@
           </a>
         </span>
       </div>
-      <!--end-- 우측 상단 메뉴 아이콘들 -->
+      <!--end--우측 상단 메뉴 아이콘들 -->
+
     </header>
-    <!--햄버거메뉴바 클릭-->
+    <!--end--헤더 고정-->
+
+    <!--start--햄버거메뉴바 클릭-->
     <div id="mySidenav" class="sidenav">
       <a class=" closebtn" onclick="closeNav()">&times;</a>
       <a class="nav-menu-1" href="#">HOME</a>
@@ -68,16 +71,25 @@
       <a class="nav-menu-6" href="#">CONTACT</a>
     </div>
     <!--end--햄버거메뉴바 클릭-->
-    <div id="main__story">
+
+    <!--start--메인컨텐츠-->
+    <div id="main__contents">
       sssssssssssss
     </div>
+    <!--end--메인컨텐츠-->
 
+    <!--start--푸터-->
     <footer id="main__footer">
       @Copyright
     </footer>
+    <!--end--푸터-->
 
   </div>
+  <!--end--페이지 전체 컨테이너-->
+
+  <!--start--VanillaJS-->
   <script src="main.js"></script>
+  <!--end--VanillaJS-->
 </body>
 
 </html>

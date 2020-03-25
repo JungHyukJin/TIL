@@ -1,13 +1,12 @@
 body {
   background-color: white;
-  height: 300vh;
   font-family: 'Poor Story', cursive;
   transition: background-color .5s;
 }
 
 
 .main-logo {
-  height: 125px;
+  height: 120px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -47,8 +46,8 @@ body {
   margin-top: 5px;
 }
 
-a {
-  color: black;
+.nav__icon>a {
+  color: black
 }
 
 #nav-container:focus-within .button {
@@ -76,19 +75,21 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  height: 125px;
+  height: 120px;
   position: fixed;
   display: flex;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   justify-content: space-between;
-  background-color: white;
+  background: white;
   align-items: center;
 }
 
-#main__story {
+#main__contents {
+  /* border: solid 2px red; */
   display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 400px;
+  margin: 1px;
 }
 
 #main__footer {
@@ -135,7 +136,7 @@ a {
 }
 
 .sidenav a {
-  margin-top: 50px;
+  margin-top: 40px;
   font-size: 30px;
   color: black;
   background-color: white;
@@ -148,8 +149,9 @@ a {
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
-  font-size: 70px;
+  right: 30px;
+  font-size: 60px;
+  background-color: white;
 }
 
 /*---end--- 햄버거메뉴 오픈 시 사이드 네비 */
