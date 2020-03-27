@@ -1,12 +1,11 @@
-.login__layout {
+.signUp__layout {
   border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
-.login__layout-form {
+.signUp__layout-form {
   width: 650px;
   margin-top: 50px;
   padding-bottom: 20px;
@@ -19,7 +18,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-#login-form {
+#signUp-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,14 +26,14 @@ h1 {
   width: 100%;
 }
 
-#login-form>input {
+#signUp-form>input {
   height: 50px;
   width: 90%;
   margin-bottom: 15px;
   border-radius: 15px;
 }
 
-#login-form>button {
+#signUp-form>button {
   height: 50px;
   width: 90%;
   min-width: 50%;
@@ -56,16 +55,15 @@ h1 {
   background-color: aliceblue;
 }
 
-#login-button {
+#signUp-button {
   color: white;
   border: none;
   font-size: 25px;
-  background: salmon;
+  background-color: salmon;
 }
 
-#login-button:hover {
+#signUp-button:hover {
   cursor: pointer;
-  /* background-color: #e55039; */
   background-color: #e55039;
 }
 
@@ -74,7 +72,7 @@ input::placeholder {
   font-weight: bold;
 }
 
-#google-login-btn {
+#google-signUp-btn {
   color: white;
   display: flex;
   align-items: center;
@@ -84,38 +82,24 @@ input::placeholder {
   background-color: lightskyblue;
 }
 
-#google-login-btn:hover {
+#google-signUp-btn:hover {
   cursor: pointer;
   background-color: darkturquoise;
 }
 
-#password-find {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  font-size: 22px;
-}
-
-#password-find:hover {
-  font-weight: bold;
-}
-
-#go-to-signUp {
+#go-to-login {
   margin-bottom: 10px;
   text-align: center;
   font-size: 25px;
 }
 
-#go-to-signUp>a:hover {
+#go-to-login>a {
   font-weight: bold;
+  color: dodgerblue;
 }
 
-#password-find>a {
-  color: #3b6978;
-}
-
-#go-to-signUp>a {
-  color: #323edd;
+#go-to-login>a:hover {
+  color: blue;
 }
 
 #user-help {
@@ -123,4 +107,24 @@ input::placeholder {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+#signUp-form>h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+#signUp-form>p {
+  font-size: 22px;
+  text-align: center;
+}
+
+#signUp-check {
+  width: 85%;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+#signUp-form>p+p {
+  margin-top: 0;
 }

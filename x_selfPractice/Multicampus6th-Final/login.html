@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>LOGIN PAGE</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -12,11 +12,13 @@
   </style>
 </head>
 
+
 <body>
   <!--start--페이지 전체 컨테이너-->
   <div id='main__container'>
     <!--start--헤더 고정-->
     <header id="main__header">
+
       <!--start--햄버거메뉴-->
       <div id="nav-container" onclick="openNav()">
         <div class="button" tabindex="0">
@@ -27,31 +29,34 @@
       </div>
       <!--end--햄버거메뉴-->
 
-      <img class="main-logo" src="images/logo.png" alt="">
+      <a href="main.html">
+        <img class="main-logo" src="images/333.png" alt="">
+      </a>
 
       <!--start--우측 상단 메뉴 아이콘들 -->
       <div class="nav__nav-column">
         <span class="nav__icon">
           <a href="#.html">
-            <!-- <i class="fas fa-search"></i> -->
-            Search
+            <i class="fas fa-search"></i>
+            <span>Search</span>
           </a>
         </span>
         <span class="nav__icon">
           <a href="#.html">
-            <!-- <i class="fas fa-camera-retro"></i> -->
-            Camera
+            <i class="fas fa-camera-retro"></i>
+            <span>Camera</span>
+          </a>
+        </span>
+        <span class=" nav__icon">
+          <a href="login.html">
+            <i class="far fa-bookmark"></i>
+            <span>Bookmark</span>
           </a>
         </span>
         <span class="nav__icon">
-          <a href="#">
-            <!-- <i class="far fa-user"></i> -->
-            Log In
-          </a>
-        </span>
-        <span class="nav__icon">
-          <a href="#">
-            Sign Up
+          <a href="login.html">
+            <i class="far fa-user"></i>
+            <span>User</span>
           </a>
         </span>
       </div>
@@ -63,11 +68,11 @@
     <!--start--햄버거메뉴바 클릭-->
     <div id="mySidenav" class="sidenav">
       <a class=" closebtn" onclick="closeNav()">&times;</a>
-      <a class="nav-menu-1" href="#">HOME</a>
+      <a class="nav-menu-1" href="main.html">HOME</a>
       <a class="nav-menu-2" href="#">GUIDE</a>
       <a class="nav-menu-3" href="#">SEARCH</a>
       <a class="nav-menu-4" href="#">BOOMARK</a>
-      <a class="nav-menu-5" href="#">USER</a>
+      <a class="nav-menu-5" href="login.html">USER</a>
       <a class="nav-menu-6" href="#">CONTACT</a>
     </div>
     <!--end--햄버거메뉴바 클릭-->
@@ -76,34 +81,50 @@
     <div id="main__contents">
       <div class="login__layout">
         <div class="login__layout-form">
+          <!--start--로그인 폼-->
           <form clss="loginForm" id="login-form" action="#" method="" enctype="multipart/form-data">
             <h1>
               오늘 뭐 해먹지 ?
             </h1>
-            <input id="email-id" type="email" placeholder="Enter email">
+            <input id="email-id" type="email" placeholder="Enter email" autofocus>
             <input id="email-password" type="password" placeholder="Enter password">
-            <button id="login-button" type="submit">Log in</button>
+            <button id="login-button" type="submit">
+              로그인
+            </button>
             <button id="google-login-btn" type="submit">
               <img src="images/google.png">
-              <span style="padding-left: 10px;">Log in with Google</span>
+              <span style="padding-left: 10px;">
+                구글로 로그인
+              </span>
             </button>
           </form>
+          <!--end--로그인 폼-->
+
           <hr>
+          <!--아이디비번찾기모달창으로 만들기!-->
           <div id="user-help">
-            <span id="password-find"><a href="">Forgot password?</a>
+            <span id="password-find"><a href="">
+                아이디/비번 찾기
+              </a>
             </span>
-            <span id="go-to-signUp"><a href="">Don't have an account? Register here!</a>
+            <span id="go-to-signUp">
+              아직 계정이 없으신가요?
+              <a href="signUp.html">
+                회원가입!
+              </a>
             </span>
           </div>
+          <!--아이디비번찾기모달창으로 만들기!-->
+
         </div>
       </div>
     </div>
     <!--end--메인컨텐츠-->
 
     <!--start--푸터-->
-    <!-- <footer id="main__footer">
-      @Copyright
-    </footer> -->
+    <footer id="main__footer">
+      @"오늘 뭐 해먹지?" Corp. All right reserved.
+    </footer>
     <!--end--푸터-->
 
   </div>
@@ -111,6 +132,8 @@
 
   <!--start--VanillaJS-->
   <script src="main.js"></script>
+  <script src="user.js"></script>
+
   <!--end--VanillaJS-->
 </body>
 
