@@ -24,6 +24,9 @@ body {
 }
 
 @media (max-width:680px) {
+  .login__layout-form {
+    margin-top: 5px;
+  }
 
   #login-form>h1 {
     font-size: 40px;
@@ -35,19 +38,26 @@ body {
 
   .main-logo {
     height: 50px;
+    visibility: hidden;
+  }
+
+  .main-logo2 {
+    top: 3px;
+    height: 40px;
+    visibility: visible;
   }
 
   #main__container {
-    padding-top: 70px;
+    padding-top: 45px;
   }
 
   .nav__icon+.nav__icon+.nav__icon+.nav__icon {
-    margin-right: 20px;
+    margin-right: 15px;
   }
 
   .nav__icon {
     font-size: 15px;
-    margin-left: 20px;
+    margin-left: 13px;
   }
 
   #signUp-form>h1 {
@@ -57,12 +67,23 @@ body {
   #signUp-form>p {
     font-size: 20px;
   }
+
+  #email-id,
+  #email-password,
+  #email-password-check {
+    border: none;
+    padding-left: 15px;
+    font-size: 15px;
+    background-color: aliceblue;
+  }
 }
 
 @media (max-width:400px) {
-  h1 {
+  #login-form>h1 {
     font-size: 25px;
     padding-top: 5px;
+    margin-bottom: 20px;
+    width: 160px;
   }
 
   #signUp-form>input {
@@ -83,8 +104,67 @@ body {
 
   #login-button,
   #google-login-btn,
+  #google-signUp-btn,
   #password-find,
   #go-to-signUp {
     font-size: 20px;
   }
+
+  #google-login-btn>span {
+    width: 120px;
+    margin-left: -8px;
+  }
+
+  #password-find>span {
+    width: 200px;
+  }
+
+  #go-to-signUp>span {
+    width: 120px;
+  }
+
+  #user-help {
+    width: 100%;
+  }
+
+  #user-help>span {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  #user-help>a {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .main-logo2 {
+    top: 7px;
+    height: 30px;
+  }
+
+  .nav__icon {
+    font-size: 15px;
+    margin-left: 7px;
+  }
+
+  #main__container {
+    margin-top: 50px;
+    padding-top: 0;
+  }
+
+  .login__layout-form {
+    margin-top: 5px;
+  }
+
+
+  #google-signUp-btn>span {
+    width: 130px;
+    margin-left: -7px;
+  }
+
+  #main__header>nav-container>.button>.icon-bar {
+    width: 10%;
+    width: 10px;
+  }
+
 }

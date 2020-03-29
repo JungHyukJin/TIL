@@ -48,7 +48,8 @@ h1 {
   background-color: aliceblue;
 }
 
-#email-password {
+#email-password,
+#email-password-check {
   border: none;
   padding-left: 20px;
   font-size: 20px;
@@ -127,4 +128,12 @@ input::placeholder {
 
 #signUp-form>p+p {
   margin-top: 0;
+}
+
+#signUp-check>a {
+  color: mediumblue;
+}
+
+#signUp-check>a:hover {
+  font-weight: bold;
 }
