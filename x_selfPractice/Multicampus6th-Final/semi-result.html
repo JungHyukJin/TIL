@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result</title>
+  <link rel="stylesheet" href="static/css/styles.css">
+</head>
+
+<body class="result__body">
+  <header class="header__name">
+    . . . . . Result . . . . .
+  </header>
+  <form action="" method="post" enctype="multipart/form-data">
+    <div class="result__container">
+      <div class="result__container container">
+        
+        <img src="{{ url_for('static', filename='img/result_img.jpg') }}">
+      </div>
+      <div class="result__info">
+        <div class="info">
+          Defect Class Number : {{class_num}}
+        </div>
+        <a id="result-back__link" href='/main'>
+          <button type="button" id="result-back-btn">"처음으로 돌아가기"</button>
+        </a>
+      </div>
+    </div>
+    <!--end img__container-->
+  </form>
+
+  <image >
+</body>
+
+</html>

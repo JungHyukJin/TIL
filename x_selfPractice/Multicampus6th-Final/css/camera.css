@@ -1,0 +1,51 @@
+#main__contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+input[type="file"] {
+  display: none;
+}
+
+#main__contents>.img__container {
+  border-radius: 15px;
+  box-shadow: 0 20px 15px rgba(24, 13, 13, 0.4), 0 6px 6px rgba(0, 0, 0, 0.23);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 550px;
+  height: 500px;
+  margin-top: 30px;
+}
+
+
+#selected-img {
+  max-width: 95%;
+  max-height: 95%;
+}
+
+#btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+img {
+  cursor: pointer;
+}
+
+#camera-upload {
+  font-size: 22px;
+  font-weight: bold;
+  width: 220px;
+  height: 50px;
+  border-radius: 5px;
+  /* background: floralwhite; */
+  background: black;
+  color: white;
+  cursor: pointer;
+}

@@ -1,12 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Poor+Story&display=swap&subset=korean');
-
 @import "reset.css";
 @import "main.css";
 @import "logIn.css";
 @import "signUp.css";
+@import "camera.css";
+
+@font-face {
+  font-family: omniGothic;
+  src: url('/font/omniGothic.ttf');
+}
 
 * {
-  font-family: 'Poor Story', cursive;
+  /* font-family: 'Poor Story', cursive; */
+  font-family: "omniGothic";
   outline: none;
   text-decoration: none;
   box-sizing: border-box;
@@ -20,6 +25,13 @@ body {
 @media (max-width:1260px) {
   .nav__nav-column>.nav__icon>a>span {
     display: none;
+  }
+}
+
+@media(max-width:1024px) {
+  #main__contents>.img__container {
+    width: 450px;
+    height: 400px;
   }
 }
 
@@ -48,7 +60,7 @@ body {
   }
 
   #main__container {
-    padding-top: 45px;
+    margin-top: 80px;
   }
 
   .nav__icon+.nav__icon+.nav__icon+.nav__icon {
@@ -76,6 +88,48 @@ body {
     font-size: 15px;
     background-color: aliceblue;
   }
+
+  #main__contents>.img__container {
+    width: 400px;
+    height: 350px;
+  }
+
+  .icon-bar {
+    width: 30px;
+    height: 3.2px;
+  }
+
+  #nav-container {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width:480px) {
+  #main__contents>.img__container {
+    width: 350px;
+    height: 300px;
+  }
+
+  #signUp-form>h1 {
+    font-weight: bold;
+    font-size: 35px;
+  }
+
+  #signUp-form>p {
+    font-size: 15px;
+  }
+
+  #signUp-form>button {
+    font-size: 20px;
+  }
+
+  #signUp-check {
+    font-size: 15px;
+  }
+
+  #user-help>span {
+    font-size: 20px;
+  }
 }
 
 @media (max-width:400px) {
@@ -83,7 +137,6 @@ body {
     font-size: 25px;
     padding-top: 5px;
     margin-bottom: 20px;
-    width: 160px;
   }
 
   #signUp-form>input {
@@ -111,16 +164,7 @@ body {
   }
 
   #google-login-btn>span {
-    width: 120px;
     margin-left: -8px;
-  }
-
-  #password-find>span {
-    width: 200px;
-  }
-
-  #go-to-signUp>span {
-    width: 120px;
   }
 
   #user-help {
@@ -147,15 +191,14 @@ body {
     margin-left: 7px;
   }
 
-  #main__container {
-    margin-top: 50px;
+  body>#main__container {
+    margin-top: 60px;
     padding-top: 0;
   }
 
   .login__layout-form {
     margin-top: 5px;
   }
-
 
   #google-signUp-btn>span {
     width: 130px;
@@ -167,4 +210,80 @@ body {
     width: 10px;
   }
 
+}
+
+@media (max-width: 380px) {
+  #main__contents>.img__container {
+    width: 300px;
+    height: 250px;
+  }
+
+  .icon-bar {
+    width: 25px;
+    height: 3px;
+  }
+
+  #nav-container {
+    padding-left: 10px;
+  }
+
+  #signUp-form>button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  #signUp-form>h1 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  #signUp-form>p {
+    font-size: 12px;
+  }
+
+  #signUp-check {
+    font-size: 12px;
+  }
+
+  #main__contents>.img__container {
+    width: 250px;
+    height: 200px;
+  }
+
+  #login-button {
+    font-size: 15px;
+  }
+
+  #google-signUp-btn {
+    font-size: 15px;
+  }
+
+  #user-help>#go-to-login {
+    font-size: 15px;
+  }
+
+  #user-help>span {
+    font-size: 15px;
+  }
+
+  #signUp-form>input {
+    font-size: 10px;
+  }
+
+  #signUp-form>button {
+    font-size: 10px;
+  }
+
+  #google-login-btn {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #google-login-btn>img {
+    width: 13px;
+    margin-right: 5px;
+  }
 }

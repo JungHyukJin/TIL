@@ -1,6 +1,5 @@
 body {
-  background-color: #fdfdfd;
-  font-family: 'Poor Story', cursive;
+  font-family: "omniGothic";
   transition: background-color .5s;
   height: 150vh;
 }
@@ -24,7 +23,7 @@ body {
 }
 
 #main__container {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   margin-top: 120px;
   display: flex;
   flex-direction: column;
@@ -34,7 +33,6 @@ body {
 }
 
 #main__contents {
-  /* border: 2px solid red; */
   width: 100%;
 }
 
@@ -92,7 +90,8 @@ body {
   display: flex;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   justify-content: space-between;
-  background: #FDFDFD;
+  /* background: #FDFDFD; */
+  background: floralwhite;
   align-items: center;
 }
 
@@ -200,4 +199,18 @@ body {
 
 #nav-container {
   padding-left: 30px;
+}
+
+#main-page {
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

@@ -43,12 +43,12 @@
           </a>
         </span>
         <span class="nav__icon">
-          <a href="#.html">
+          <a href="camera.html">
             <i class="fas fa-camera-retro"></i>
             <span>Camera</span>
           </a>
         </span>
-        <span class=" nav__icon">
+        <span class="nav__icon">
           <a href="login.html">
             <i class="far fa-bookmark"></i>
             <span>Bookmark</span>
@@ -71,7 +71,7 @@
       <a class="closebtn" onclick="closeNav()">&times;</a>
       <a class="nav-menu-1" href="main.html">HOME</a>
       <a class="nav-menu-2" href="#">GUIDE</a>
-      <a class="nav-menu-3" href="#">SEARCH</a>
+      <a class="nav-menu-3" href="camera.html">CAMERA</a>
       <a class="nav-menu-4" href="#">BOOMARK</a>
       <a class="nav-menu-5" href="login.html">USER</a>
       <a class="nav-menu-6" href="#">CONTACT</a>
@@ -83,12 +83,10 @@
       <div class="login__layout">
         <div class="login__layout-form">
           <!--start--로그인 폼-->
-          <form clss="loginForm" id="login-form" action="#" method="" enctype="multipart/form-data">
-            <h1>
-              오늘 뭐 해먹지?
-            </h1>
-            <input id="email-id" type="email" placeholder="Enter email" autofocus autocomplete="off">
-            <input id="email-password" type="password" placeholder="Enter password" autocomplete="off">
+          <form class="loginForm" id="login-form" action="#" method="" enctype="multipart/form-data">
+            <h1>오늘 뭐 해먹지?</h1>
+            <input id="email-id" type="email" placeholder="이메일을 입력해주세요." autofocus autocomplete="off">
+            <input id="email-password" type="password" placeholder="비밀번호를 입력해주세요." autocomplete="off">
             <button id="login-button" type="submit">
               로그인
             </button>
@@ -124,7 +122,7 @@
 
     <!--start--푸터-->
     <footer id="main__footer">
-      @"오늘 뭐 해먹지?" Corp. All right reserved.
+      @"추천해주는 세끼" Corp. All right reserved.
     </footer>
     <!--end--푸터-->
 
@@ -132,8 +130,8 @@
   <!--end--페이지 전체 컨테이너-->
 
   <!--start--VanillaJS-->
-  <script src="main.js"></script>
-  <script src="user.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/autofocus.js"></script>
 
   <!--end--VanillaJS-->
 </body>

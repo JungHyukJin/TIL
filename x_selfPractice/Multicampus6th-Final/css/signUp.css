@@ -26,6 +26,10 @@ h1 {
   width: 100%;
 }
 
+#signUp-form>h1 {
+  font-weight: bold;
+}
+
 #signUp-form>input {
   height: 50px;
   width: 90%;

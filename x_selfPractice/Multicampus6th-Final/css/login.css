@@ -14,17 +14,16 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-h1 {
-  font-size: 50px;
-  margin-bottom: 30px;
-}
-
 #login-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
+}
+
+#login-form>h1 {
+  font-weight: bold;
 }
 
 #login-form>input {
@@ -59,7 +58,7 @@ h1 {
 #login-button {
   color: white;
   border: none;
-  font-size: 25px;
+  font-size: 20px;
   background: salmon;
 }
 
@@ -75,11 +74,8 @@ input::placeholder {
 
 #google-login-btn {
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: none;
-  font-size: 25px;
+  font-size: 20px;
   background: lightskyblue;
 }
 
