@@ -5,12 +5,11 @@
   justify-content: center;
 }
 
-
 input[type="file"] {
   display: none;
 }
 
-#main__contents>.img__container {
+#main__contents > .img__container {
   border-radius: 15px;
   box-shadow: 0 20px 15px rgba(24, 13, 13, 0.4), 0 6px 6px rgba(0, 0, 0, 0.23);
   display: flex;
@@ -20,7 +19,6 @@ input[type="file"] {
   height: 500px;
   margin-top: 30px;
 }
-
 
 #selected-img {
   max-width: 95%;
@@ -43,8 +41,7 @@ img {
   font-weight: bold;
   width: 220px;
   height: 50px;
-  border-radius: 5px;
-  /* background: floralwhite; */
+  border-radius: 12px;
   background: black;
   color: white;
   cursor: pointer;
