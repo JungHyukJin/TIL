@@ -29,7 +29,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding-top: 125px; */
 }
 
 #main__contents {
@@ -38,12 +37,12 @@ body {
 
 /* --- Menu-bar --- */
 .button {
-  position: relative;
+  /* position: relative; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   border: 0;
-  background: transparent;
+  /* background: transparent; */
   border-radius: 0;
   height: 40px;
   width: 35px;
@@ -64,16 +63,16 @@ body {
 }
 
 .nav__icon>a {
-  color: black
+  color: black;
 }
 
 #nav-container:focus-within .icon-bar:nth-of-type(1) {
   transform: translate3d(0, 9px, 0) rotate(45deg);
 }
 
-#nav-container:focus-within .icon-bar:nth-of-type(2) {
+/* #nav-container:focus-within .icon-bar:nth-of-type(2) {
   opacity: 0;
-}
+} */
 
 #nav-container:focus-within .icon-bar:nth-of-type(3) {
   transform: translate3d(0, -9px, 0) rotate(-45deg);
@@ -90,7 +89,6 @@ body {
   display: flex;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   justify-content: space-between;
-  /* background: #FDFDFD; */
   background: floralwhite;
   align-items: center;
 }
@@ -118,7 +116,6 @@ body {
 }
 
 .nav__icon>a:hover {
-  color: darkcyan;
   font-weight: bold;
 }
 
@@ -131,7 +128,7 @@ body {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   top: 0;
   left: 0;
   overflow-x: hidden;
@@ -140,7 +137,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #fdfdfd;
 }
 
 .sidenav a {
@@ -153,14 +150,13 @@ body {
 }
 
 
-.sidenav .closebtn {
+.sidenav>.closebtn {
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 30px;
-  font-size: 60px;
+  font-size: 45px;
   padding-bottom: 0;
   margin-bottom: 0;
-  margin-top: 20px;
 }
 
 /*---end--- 햄버거메뉴 오픈 시 사이드 네비 */
@@ -191,10 +187,6 @@ body {
 
 .nav-menu-6:hover {
   color: mediumvioletred;
-}
-
-.sidenav {
-  pointer-events: auto;
 }
 
 #nav-container {
