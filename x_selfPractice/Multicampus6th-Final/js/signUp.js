@@ -16,8 +16,7 @@ PolicyModalOpenButton.addEventListener("click", PolicyOpenModal);
 PolicyModalCloseBtn.addEventListener("click", PolicyCloseModal);
 PolicyOverlay.addEventListener("click", PolicyCloseModal);
 
-
-// 개인정보취급방침 
+// 개인정보취급방침
 const PrivacyModalOpenButton = document.getElementById("privacy-modal__open");
 const PrivacyModal = document.querySelector(".privacy__modal");
 const PrivacyOverlay = PrivacyModal.querySelector(".modal__overlay");

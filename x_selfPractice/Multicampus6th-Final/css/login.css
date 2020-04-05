@@ -7,6 +7,7 @@
 }
 
 .login__layout-form {
+  border: 2px solid #f1f2f6;
   width: 650px;
   margin-top: 50px;
   padding-bottom: 20px;

@@ -5,6 +5,6 @@ function openNav() {
 }
 // 햄버거 메뉴바 닫기
 function closeNav() {
+  document.querySelector("body").style.background = "#fdfdfd";
   document.querySelector(".sidenav").style.width = "0";
-  document.querySelector("body").style.background = "white";
 }
