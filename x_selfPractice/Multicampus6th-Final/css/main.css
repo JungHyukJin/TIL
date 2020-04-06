@@ -1,7 +1,7 @@
 body {
   font-family: "omniGothic";
   transition: background-color .5s;
-  height: 150vh;
+  /* height: 150vh; */
 }
 
 .main-logo {
@@ -21,6 +21,26 @@ body {
   transform: translateX(-50%);
   visibility: hidden;
 }
+
+#main__bg-one {
+  border-radius: 20px;
+  display: block;
+  width: 80%;
+  cursor: default;
+  z-index: -1;
+  transition: 1s;
+}
+
+#main__bg-two {
+  border-radius: 20px;
+  display: none;
+  margin-top: 100px;
+  width: 100%;
+  cursor: default;
+  z-index: -1;
+  transition: 1s;
+}
+
 
 #main__container {
   /* border: 2px solid red; */

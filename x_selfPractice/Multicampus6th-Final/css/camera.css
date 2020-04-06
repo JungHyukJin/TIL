@@ -9,7 +9,7 @@ input[type="file"] {
   display: none;
 }
 
-#main__contents > .img__container {
+#main__contents>.img__container {
   border-radius: 15px;
   box-shadow: 0 20px 15px rgba(24, 13, 13, 0.4), 0 6px 6px rgba(0, 0, 0, 0.23);
   display: flex;
@@ -37,12 +37,12 @@ img {
 }
 
 #camera-upload {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   width: 220px;
   height: 50px;
   border-radius: 12px;
-  background: black;
-  color: white;
+  background: #FFFAF0;
+  color: black;
   cursor: pointer;
 }
