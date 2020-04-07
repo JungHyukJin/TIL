@@ -12,17 +12,17 @@
 #recipe__search {
   width: 90%;
   height: 70px;
-  max-width: 500px;
-  margin: 10px;
+  max-width: 700px;
   padding-left: 10px;
   border-radius: 10px;
   border: 4px solid #576574;
   font-size: 20px;
+  margin: 10px;
 }
 
 #recipe__category {
   width: 90%;
-  max-width: 500px;
+  max-width: 700px;
   background-color: #576574;
   color: white;
   font-size: 20px;
@@ -33,7 +33,7 @@
 
 #recipe__types {
   width: 90%;
-  max-width: 500px;
+  max-width: 700px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,7 +63,7 @@
 /*--start--메뉴 리스트 */
 #menu__lists {
   width: 90%;
-  max-width: 500px;
+  max-width: 700px;
 }
 
 .menu__list {
@@ -91,8 +91,8 @@
 }
 
 .menu__list-image {
-  width: 130px;
-  height: 130px;
+  width: 190px;
+  height: 190px;
   border-radius: 5px;
 }
 

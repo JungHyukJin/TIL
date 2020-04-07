@@ -11,7 +11,7 @@ input[type="file"] {
 
 #main__contents>.img__container {
   border-radius: 15px;
-  box-shadow: 0 20px 15px rgba(24, 13, 13, 0.4), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 5px 10px rgba(24, 13, 13, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;

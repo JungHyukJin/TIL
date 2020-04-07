@@ -13,11 +13,6 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-h1 {
-  font-size: 50px;
-  margin-bottom: 30px;
-}
-
 #signUp-form {
   display: flex;
   flex-direction: column;
@@ -27,7 +22,8 @@ h1 {
 }
 
 #signUp-form>h1 {
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 40px;
 }
 
 #signUp-form>input {
@@ -93,9 +89,10 @@ input::placeholder {
 }
 
 #go-to-login {
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
   text-align: center;
-  font-size: 25px;
+  font-size: 22px;
 }
 
 #go-to-login>a {
@@ -114,10 +111,6 @@ input::placeholder {
   justify-content: center;
 }
 
-#signUp-form>h1 {
-  font-size: 50px;
-  margin-bottom: 15px;
-}
 
 #signUp-form>p {
   font-size: 22px;
@@ -172,6 +165,10 @@ input::placeholder {
   color: blue;
 }
 
+#policy-modal__open:hover {
+  font-weight: bold;
+}
+
 #policy-modal__close {
   cursor: pointer;
   font-size: 30px;
@@ -182,6 +179,10 @@ input::placeholder {
   position: absolute;
   top: 20px;
   right: 20px;
+}
+
+#policy-modal__close:hover {
+  font-weight: bold;
 }
 
 .privacy__modal {
@@ -219,6 +220,10 @@ input::placeholder {
   color: blue;
 }
 
+#privacy-modal__open:hover {
+  font-weight: bold;
+}
+
 .modal__content>h1 {
   width: 400px;
   font-size: 30px;
@@ -234,6 +239,10 @@ input::placeholder {
   position: absolute;
   top: 20px;
   right: 20px;
+}
+
+#privacy-modal__close:hover {
+  font-weight: bold;
 }
 
 /*--end--이용약관 및 개인정보취급방침 모달*/

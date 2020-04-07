@@ -20,13 +20,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
 }
 
 #login-form>h1 {
   padding-top: 15px;
-  font-weight: bold;
-  font-size: 45px;
+  font-weight: 600;
+  font-size: 40px;
 }
 
 #login-form>input {
@@ -99,9 +98,10 @@ input::placeholder {
 }
 
 #go-to-signUp {
+  margin-top: 5px;
   margin-bottom: 10px;
   text-align: center;
-  font-size: 25px;
+  font-size: 22px;
 }
 
 #go-to-signUp>a:hover {
