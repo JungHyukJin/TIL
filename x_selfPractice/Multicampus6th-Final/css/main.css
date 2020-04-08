@@ -1,7 +1,7 @@
 body {
   font-family: "omniGothic";
   transition: background-color .5s;
-  /* height: 150vh; */
+  height: 150vh;
 }
 
 .main-logo {
@@ -226,4 +226,13 @@ body {
   to {
     opacity: 1;
   }
+}
+
+#bg {
+  position: absolute;
+  top: 119px;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
 }

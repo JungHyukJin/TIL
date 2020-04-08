@@ -4,6 +4,7 @@
 @import "signUp.css";
 @import "camera.css";
 @import "search.css";
+@import "result.css";
 
 @font-face {
   font-family: omniGothic;
@@ -19,7 +20,7 @@
 }
 
 body {
-  background-color: #fdfdfd;
+  background-color: white;
 }
 
 @media (max-width:1550px) {
@@ -148,6 +149,10 @@ body {
   .menu__list-image {
     width: 120px;
     height: 120px;
+  }
+
+  #bg {
+    top: 51px;
   }
 }
 
