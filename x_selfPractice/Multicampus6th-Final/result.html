@@ -21,7 +21,7 @@
         <a class="nav-menu-2" href="#">GUIDE</a>
         <a class="closebtn" onclick="closeNav()">&times;</a>
         <a class="nav-menu-3" href="camera.html">CAMERA</a>
-        <a class="nav-menu-4" href="#">BOOMARK</a>
+        <a class="nav-menu-4" href="#">BOOKMARK</a>
         <a class="nav-menu-5" href="login.html">USER</a>
       </div>
       <!--end--햄버거메뉴바 클릭-->
@@ -79,7 +79,7 @@
 
     <!--start--메인컨텐츠-->
     <div id="main__contents">
-      <form id="" action="" method="post" enctype="multipart/form-data">
+      <form id="result__form" action="" method="post" enctype="multipart/form-data">
         <div class="result__container">
           <div class="result__img-container">
             <img id="result__img" src="/">
@@ -88,28 +88,20 @@
 
           <header id="result-header">분석결과</header>
 
-
-          <ul class="result__info">
-            <li class="info">
-              <input type="text" name="" value="사과" id="">
-              <div class="info-close-btn">&times;</div>
-            </li>
-            <li class="info">
-              배
-              <div class="info-close-btn">&times;</div>
-            </li>
-            <li id="info">
-              참외
-              <div class="info-close-btn">&times;</div>
-            </li>
-            <span id="info-plus-btn">+</span>
-          </ul>
-
+          <div id="result-main">
+            <ul id="result__info">
+            </ul>
+          </div>
+          <div id="info-plus-btn">+</div>
 
           <button id="next-btn" type="button">다음</button>
         </div>
+        <input id="plus__text" type="text" placeholder="추가하실 재료">
       </form>
       <!--end img__container-->
+
+
+
     </div>
     <!--end--메인컨텐츠-->
 
@@ -124,23 +116,9 @@
 
   <!--start--VanillaJS-->
   <script src="js/main.js"></script>
-
-  <script>
-    let analyzed__ingredients,
-      i,
-      ingredient__lists = "";
-    analyzed__ingredients = {
-      name: ["egg", "onion", "potato", "carrot", "cucumber"]
-    };
-    for (i in analyzed__ingredients.name) {
-      ingredient__lists += "<li>" + analyzed__ingredients.name[i] + "</li>";
-    }
-
-    document.getElementById("info").innerHTML = ingredient__lists;
-
-    // document.createElement("li").append = ingredient__lists;
-  </script>
+  <script src="js/result.js"></script>
   <!--end--VanillaJS-->
+
 </body>
 
 </html>
