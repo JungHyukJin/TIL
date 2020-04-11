@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAIN PAGE</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!--start--페이지 전체 컨테이너-->
+  <div id='main__container'>
+    <!--start--헤더 고정-->
+    <header id="main__header">
+
+      <!--start--햄버거메뉴 onclick="openNav()-->
+      <div id="bg" onclick="closeNav()"></div>
+      <div id="nav-container" onclick="openNav()">
+        <div class=" button" tabindex="0">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </div>
+      </div>
+      <!--end--햄버거메뉴-->
+
+      <!--start--메인로고  -->
+      <a href="/">
+        <img class="main-logo" src="images/main-logo.png">
+        <img class="main-logo2" src="images/main-logo2.png">
+      </a>
+      <!--end--메인로고  -->
+
+
+      <!--start--우측 상단 메뉴 아이콘들 -->
+      <div class="nav__nav-column">
+        <span class="nav__icon">
+          <a href="/search">
+            <i class="fas fa-search"></i>
+            <span>검색</span>
+          </a>
+        </span>
+        <span class="nav__icon">
+          <a href="/camera">
+            <i class="fas fa-camera-retro"></i>
+            <span>촬영</span>
+          </a>
+        </span>
+        <span class="nav__icon">
+          <a href="/bookmark">
+            <i class="far fa-bookmark"></i>
+            <span>북마크</span>
+          </a>
+        </span>
+        <span class="nav__icon">
+          <a href="/login">
+            <i class="far fa-user"></i>
+            <span>로그인</span>
+          </a>
+        </span>
+      </div>
+      <!--end--우측 상단 메뉴 아이콘들 -->
+
+    </header>
+    <!--end--헤더 고정-->
+
+    <!--start--햄버거메뉴바 클릭-->
+    <div id="mySidenav" class="sidenav">
+      <a class="nav-menu-1" href="/">HOME</a>
+        <a class="nav-menu-1" href="/search">SEARCH</a>
+        <a class="nav-menu-2" href="/guide">GUIDE</a>
+        <a class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="nav-menu-3" href="/camera">CAMERA</a>
+        <a class="nav-menu-4" href="/bookmark">BOOMARK</a>
+        <a class="nav-menu-5" href="/login">USER</a>
+      <a class="nav-menu-6" href="#">CONTACT</a>
+    </div>
+    <!--end--햄버거메뉴바 클릭-->
+
+    <!--start--메인컨텐츠-->
+    <div id="main__contents">
+      <div class="img__container" id="img__container">
+        <img onclick="getFile()" id="selected-img" src="images/upload.png">
+      </div>
+      <form action="/upload_img" method="POST" enctype="multipart/form-data">
+        <div id="btns">
+          <button style="display:none;" onclick="getFile()" id='select' type="button">
+            <input type='file' id="select-image" name="file">
+          </button>
+          <div class="analyze-image">
+            <button id="camera-upload" type="submit">
+              레시피 검색하기
+            </button>
+          </div>
+      </form>
+    </div>
+
+  </div>
+  <!--end--메인컨텐츠-->
+
+  <!--start--푸터-->
+  <footer id="main__footer">
+    @"추천해주는 세끼" Corp. All right reserved.
+  </footer>
+  <!--end--푸터-->
+
+  </div>
+  <!--end--페이지 전체 컨테이너-->
+
+  <!--start--VanillaJS-->
+  <script src="js/main.js"></script>
+  <!-- <script src="js/autofocus.js"></script> -->
+  <script src="js/camera.js"></script>
+  <!--end--VanillaJS-->
+</body>
+
+</html>

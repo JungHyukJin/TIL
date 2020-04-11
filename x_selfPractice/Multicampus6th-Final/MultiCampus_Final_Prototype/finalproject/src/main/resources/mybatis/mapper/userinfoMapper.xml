@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.multicampus.finalproject.repository.UserMapper">
+    <select id="getAll" resultType="com.multicampus.finalproject.model.UserInfo">
+        SELECT * FROM user;
+    </select>
+
+    <select id="readUser" parameterType="String" resultType="com.multicampus.finalproject.model.UserInfo">
+        SELECT * FROM user WHERE username = #{username}
+    </select>
+
+    <select id="readAuthority" parameterType="String" resultType="String">
+        SELECT authority_name FROM authority WHERE username = #{username}
+    </select>
+
+    <insert id="insertMember" parameterType = "com.multicampus.finalproject.model.UserInfo">
+        INSERT INTO `user` (`username`, `password`, `name`, `isAccountNonExpired`, `isAccountNonLocked`, `isCredentialsNonExpired`, `isEnabled`)
+        VALUES (#{username ,jdbcType = VARCHAR}, #{password,jdbcType = VARCHAR}, #{name,jdbcType = VARCHAR}, 1, 1, 1, 1);    
+    </insert>
+
+    <insert id="insertAuthority" parameterType = "String">
+       INSERT INTO `authority` (`username`, `authority_name`) VALUES (#{dbUsername, jdbcType = VARCHAR}, 'USER')
+    </insert>
+</mapper>

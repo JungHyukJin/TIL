@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEARCH PAGE</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!--start--페이지 전체 컨테이너-->
+  <div id='main__container'>
+
+    <!--start--헤더 고정-->
+    <header id="main__header">
+
+      <!--start--햄버거메뉴바 클릭-->
+      <div id="mySidenav" class="sidenav">
+        <a class="nav-menu-1" href="main.html">HOME</a>
+        <a class="nav-menu-1" href="search.html">SEARCH</a>
+        <a class="nav-menu-2" href="#">GUIDE</a>
+        <a class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="nav-menu-3" href="camera.html">CAMERA</a>
+        <a class="nav-menu-4" href="#">BOOKMARK</a>
+        <a class="nav-menu-5" href="login.html">USER</a>
+      </div>
+      <!--end--햄버거메뉴바 클릭-->
+
+      <!--start--햄버거메뉴 onclick=" openNav()-->
+      <div id="bg" onclick="closeNav()"></div>
+      <div id="nav-container" onclick="openNav()">
+        <div class=" button" tabindex="0">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </div>
+      </div>
+      <!--end--햄버거메뉴-->
+
+      <!--start--메인로고  -->
+      <a href="main.html">
+        <img class="main-logo" src="images/main-logo.png">
+        <img class="main-logo2" src="images/main-logo2.png">
+      </a>
+      <!--end--메인로고  -->
+
+
+      <!--start--우측 상단 메뉴 아이콘들 -->
+      <div class="nav__nav-column">
+        <span class="nav__icon">
+          <a href="search.html">
+            <i class="fas fa-search"></i>
+            <span>검색</span>
+          </a>
+        </span>
+        <span class="nav__icon">
+          <a href="camera.html">
+            <i class="fas fa-camera-retro"></i>
+            <span>촬영</span>
+          </a>
+        </span>
+        <span class="nav__icon">
+          <a href="">
+            <i class="far fa-bookmark"></i>
+            <span>북마크</span>
+          </a>
+        </span>
+        <span class="nav__icon">
+          <a href="login.html">
+            <i class="far fa-user"></i>
+            <span>로그인</span>
+          </a>
+        </span>
+      </div>
+      <!--end--우측 상단 메뉴 아이콘들 -->
+
+    </header>
+    <!--end--헤더 고정-->
+
+    <!--start--메인컨텐츠-->
+    <div id="main__contents">
+
+      <!--start--서치컨텐츠-->
+      <div id="search__contents">
+        <input id="recipe__search" type="text" placeholder="요리를 검색해보세요!">
+        <div id="recipe__category">
+          <span>요리분류</span>
+        </div>
+        <div id="recipe__types">
+          <div id="recipe__type">
+            <img class="type__name" src="images/Kfood.png" alt="KoreanFood">
+            한식
+          </div>
+          <div id="recipe__type">
+            <img class="type__name" src="images/Wfood.png" alt="WesternFood">
+            양식
+          </div>
+          <div id="recipe__type">
+            <img class="type__name" src="images/Cfood.png" alt="ChineseFood">
+            중식
+          </div>
+          <div id="recipe__type">
+            <img class="type__name" src="images/Jfood.png" alt="JapaneseFood">
+            일식
+          </div>
+        </div>
+        <ul id="menu__lists">
+          <li class="menu__list">
+            <div class="about__menu">
+              <h1>시원하고 얼큰한 김치찌개</h1>
+              <span>직접 담근 김치로 만든 얼큰한 국물</span>
+            </div>
+            <img class="menu__list-image" src="images/1.jpg" alt="">
+          </li>
+          <li class="menu__list">
+            <div class="about__menu">
+              <h1>요리2</h1>
+              <span>설명2</span>
+            </div>
+            <img class="menu__list-image" src="images/2.jpg" alt="">
+          </li>
+          <li class="menu__list">
+            <div class="about__menu">
+              <h1>요리3</h1>
+              <span>설명3</span>
+            </div>
+            <img class="menu__list-image" src="images/3.jpg" alt="">
+          </li>
+          <li class="menu__list">
+            <div class="about__menu">
+              <h1>요리4</h1>
+              <span>설명4</span>
+            </div>
+            <img class="menu__list-image" src="images/4.jpg" alt="">
+          </li>
+          <li class="menu__list">
+            <div class="about__menu">
+              <h1>요리5</h1>
+              <span>설명5</span>
+            </div>
+            <img class="menu__list-image" src="images/5.jpg" alt="">
+          </li>
+        </ul>
+      </div>
+      <!--end--서치컨텐츠-->
+      <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+      </div>
+    </div>
+    <!--end--메인컨텐츠-->
+
+    <!--start--푸터-->
+    <footer id=" main__footer">
+      @"추천해주는 세끼" Corp. All right reserved.
+    </footer>
+    <!--end--푸터-->
+
+  </div>
+  <!--end--페이지 전체 컨테이너-->
+
+  <!--start--VanillaJS-->
+  <script src="js/main.js"></script>
+  <!--end--VanillaJS-->
+</body>
+
+</html>
