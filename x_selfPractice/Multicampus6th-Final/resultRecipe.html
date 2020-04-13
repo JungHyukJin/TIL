@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body id="main-page">
+<body>
   <!--start--페이지 전체 컨테이너-->
   <div id='main__container'>
     <!--start--헤더 고정-->
@@ -79,8 +79,15 @@
 
     <!--start--메인컨텐츠-->
     <div id="main__contents">
-      <img id="main__bg-one" src="images/main_img.jpg">
-      <img id="main__bg-two" src="images/main_img_mobile.jpg">
+      <div id="result-recipe__container">
+        <div id="result-img__container">
+          <img id="result-img" src="" alt="">
+        </div>
+        <div id="result-recipe-info">
+          <!-- resultRecipe.js에서 데이터 들어옴 -->
+        </div>
+
+      </div>
     </div>
     <!--end--메인컨텐츠-->
 
@@ -95,7 +102,17 @@
 
   <!--start--VanillaJS-->
   <script src="js/main.js"></script>
+  <script th:inline="javascript">
+    /*<![CDATA[*/
+        var recipe = /*[[${recipe}]]*/ "recipe";
+    /*]]>*/
+  </script>
+  <script src="js/resultRecipe.js"></script>
   <!--end--VanillaJS-->
 </body>
+
+
+
+
 
 </html>

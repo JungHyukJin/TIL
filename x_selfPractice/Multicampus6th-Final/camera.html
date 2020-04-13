@@ -27,7 +27,7 @@
       <!--end--햄버거메뉴-->
 
       <!--start--메인로고  -->
-      <a href="main.html">
+      <a href="/">
         <img class="main-logo" src="images/main-logo.png">
         <img class="main-logo2" src="images/main-logo2.png">
       </a>
@@ -37,25 +37,25 @@
       <!--start--우측 상단 메뉴 아이콘들 -->
       <div class="nav__nav-column">
         <span class="nav__icon">
-          <a href="search.html">
+          <a href="/search">
             <i class="fas fa-search"></i>
             <span>검색</span>
           </a>
         </span>
         <span class="nav__icon">
-          <a href="#.html">
+          <a href="/camera">
             <i class="fas fa-camera-retro"></i>
             <span>촬영</span>
           </a>
         </span>
         <span class="nav__icon">
-          <a href="">
+          <a href="/bookmark">
             <i class="far fa-bookmark"></i>
             <span>북마크</span>
           </a>
         </span>
         <span class="nav__icon">
-          <a href="login.html">
+          <a href="/login">
             <i class="far fa-user"></i>
             <span>로그인</span>
           </a>
@@ -68,13 +68,13 @@
 
     <!--start--햄버거메뉴바 클릭-->
     <div id="mySidenav" class="sidenav">
-      <a class="closebtn" onclick="closeNav()">&times;</a>
-      <a class="nav-menu-1" href="main.html">HOME</a>
-      <a class="nav-menu-1" href="search.html">SEARCH</a>
-      <a class="nav-menu-2" href="#">GUIDE</a>
-      <a class="nav-menu-3" href="camera.html">CAMERA</a>
-      <a class="nav-menu-4" href="#">BOOKMARK</a>
-      <a class="nav-menu-5" href="login.html">USER</a>
+      <a class="nav-menu-1" href="/">HOME</a>
+        <a class="nav-menu-1" href="/search">SEARCH</a>
+        <a class="nav-menu-2" href="/guide">GUIDE</a>
+        <a class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="nav-menu-3" href="/camera">CAMERA</a>
+        <a class="nav-menu-4" href="/bookmark">BOOMARK</a>
+        <a class="nav-menu-5" href="/login">USER</a>
       <a class="nav-menu-6" href="#">CONTACT</a>
     </div>
     <!--end--햄버거메뉴바 클릭-->
@@ -84,7 +84,7 @@
       <div class="img__container" id="img__container">
         <img onclick="getFile()" id="selected-img" src="images/upload.png">
       </div>
-      <form action="/upload_img" method="" enctype="multipart/form-data">
+      <form action="/upload_img" method="POST" enctype="multipart/form-data">
         <div id="btns">
           <button style="display:none;" onclick="getFile()" id='select' type="button">
             <input type='file' id="select-image" name="file">
