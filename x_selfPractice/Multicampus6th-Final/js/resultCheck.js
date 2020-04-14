@@ -1,6 +1,6 @@
-const resultForm = document.getElementById("result__form");
-const plusText = document.getElementById("plus__text");
+let resultForm = document.getElementById("result__form");
 let resultInfo = document.getElementById("result__info");
+const plusText = document.getElementById("plus__text");
 
 
 //--start-- 재료 데이터 받는 곳//
@@ -28,9 +28,11 @@ for (i in analyzed__ingredients.name) {
   deleteBtn.setAttribute("type", "button");
   deleteBtn.innerHTML = "X"
   deleteBtn.className = "info-delete-btn";
-  frag.appendChild(ele);
   frag.appendChild(deleteBtn);
   deleteBtn.addEventListener("click", deleteLi);
+
+  resultInfo.appendChild(frag);
+  resultInfo.appendChild(plusBtn);
 }
 
 //--end--재료 데이터 받는 곳//
@@ -45,9 +47,6 @@ function deleteLi(event) {
 }
 //--end-- 재료 삭제 버튼//
 
-resultInfo.appendChild(frag);
-resultInfo.appendChild(plusBtn);
-
 
 //--start-- 메인 재료 선정 - 미구현
 function fnc() {
@@ -56,37 +55,24 @@ function fnc() {
 //--end-- 메인 재료 선정 - 미구현
 
 
-
-//--start-- 재료추가 타이핑
-function handleSubmit(event) {
-  event.preventDefault();
+function addIng() {
   let currentValue = plusText.value;
-  paintToDo(currentValue);
-  plusText.value = "";
-}
-
-function paintToDo(text) {
-  let ele = document.createElement("input");
-  ele.readOnly = true;
-  // ele.className = "info";
-  ele.setAttribute("type", "text");
-  ele.setAttribute("name", "label");
-  ele.setAttribute("value", analyzed__ingredients.name);
-  frag.appendChild(ele);
+  let eles = document.createElement("input");
+  eles.setAttribute("type", "text");
+  eles.setAttribute("name", "label");
+  eles.setAttribute("value", currentValue);
+  frag.appendChild(eles);
 
   let deleteBtn = document.createElement("button");
   deleteBtn.setAttribute("type", "button");
   deleteBtn.innerHTML = "X"
   deleteBtn.className = "info-delete-btn";
-  frag.appendChild(ele);
-  frag.appendChild(deleteBtn);
   deleteBtn.addEventListener("click", deleteLi);
+  frag.appendChild(deleteBtn);
+
+  resultInfo.appendChild(frag);
+  resultInfo.appendChild(plusBtn);
+
+  eles.readOnly = true;
+  plusText.value = "";
 }
-
-function init() {
-  resultForm.addEventListener(plusText, handleSubmit);
-}
-init();
-
-
-//--end-- 재료추가 타이핑
