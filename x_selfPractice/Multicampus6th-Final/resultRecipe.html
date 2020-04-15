@@ -16,7 +16,7 @@
     <header id="main__header">
       <!--start--햄버거메뉴바 클릭-->
       <div id="mySidenav" class="sidenav">
-        <a class="nav-menu-1" href="/">HOME</a>
+        <a class="nav-menu-6" href="">HOME</a>
         <a class="nav-menu-1" href="/search">SEARCH</a>
         <a class="nav-menu-2" href="/guide">GUIDE</a>
         <a class="closebtn" onclick="closeNav()">&times;</a>
@@ -80,11 +80,63 @@
     <!--start--메인컨텐츠-->
     <div id="main__contents">
       <div id="result-recipe__container">
-        <div id="result-img__container">
-          <img id="result-img" src="" alt="">
-        </div>
         <div id="result-recipe-info">
           <!-- resultRecipe.js에서 데이터 들어옴 -->
+        </div>
+        <div id="recipe-info">
+          <div id="serving-info">
+            <img src="images/serving.png">
+            <span class="serving-info">
+              몇인분
+            </span>
+          </div>
+          <div id="time-info">
+            <img src="images/time.png">
+            <span class="time-info">
+              시간
+            </span>
+          </div>
+          <div id="difficulty-info">
+            <img src="images/difficulty.png">
+            <span class="difficulty-info">
+              난이도
+            </span>
+          </div>
+        </div>
+        <div id="ingredients-infos">
+          <div id="main-ingredients-info">
+            <span class="main-ingredients-info">주재료:</span>
+          </div>
+          <div id="minor-ingredients-info">
+            <span class="minor-ingredients-info">부재료:</span>
+          </div>
+        </div>
+
+        <header id="recipe-steps-header">
+          조리순서:
+        </header>
+
+        <div id="recipe__steps">
+          <div id="recipe-steps-info">
+            <div class="recipe-steps">
+              <span>
+                순서확인용
+              </span>
+              <img width="100px" src="images/222.png" alt="">
+            </div>
+            <div class="recipe-steps">
+              <span>
+                순서확인용
+              </span>
+              <img width="100px" src="images/222.png" alt="">
+            </div>
+            <div class="recipe-steps">
+              <span>
+                순서확인용
+              </span>
+              <img width="100px" src="images/222.png" alt="">
+            </div>
+          </div>
         </div>
 
       </div>
@@ -104,7 +156,7 @@
   <script src="js/main.js"></script>
   <script th:inline="javascript">
     /*<![CDATA[*/
-        var recipe = /*[[${recipe}]]*/ "recipe";
+    // var recipe = /*[[${recipe}]]*/ "recipe";
     /*]]>*/
   </script>
   <script src="js/resultRecipe.js"></script>
