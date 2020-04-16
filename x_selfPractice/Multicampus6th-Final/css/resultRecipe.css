@@ -11,6 +11,7 @@
   margin-left: 5px;
   padding: 5px;
   box-shadow: 0 5px 10px rgba(24, 13, 13, 0.4);
+  max-width: 800px;
 }
 
 #result-recipe-info {
@@ -153,4 +154,30 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid #576574;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.recipe-steps>img {
+  width: 200px;
+  border-radius: 5px;
+  margin-left: 30px;
+}
+
+.cookStep {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.stepNumber {
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#steps-end {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
