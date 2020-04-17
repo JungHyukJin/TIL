@@ -1,8 +1,10 @@
 let resultForm = document.getElementById("result__form");
 let resultInfo = document.getElementById("result__info");
 const plusText = document.getElementById("plus__text");
+let plusBtn = document.getElementById("info-plus-btn");
+let closeBtn = document.getElementById("close__text-add");
 
-
+let frag = document.createDocumentFragment();
 //--start-- 재료 데이터 받는 곳//
 let analyzed__ingredients,
   i,
@@ -12,25 +14,26 @@ analyzed__ingredients = {
   name: label
 };
 
-let frag = document.createDocumentFragment();
-let plusBtn = document.getElementById("info-plus-btn");
 
 for (i in analyzed__ingredients.name) {
+  let ingredientsTypes = document.createElement("div");
+  ingredientsTypes.className = "ingredients-types";
   let ele = document.createElement("input");
   ele.readOnly = true;
-  // ele.className = "info";
+  ele.className = "info";
   ele.setAttribute("type", "text");
   ele.setAttribute("name", "label");
   ele.setAttribute("value", analyzed__ingredients.name);
-  frag.appendChild(ele);
+  ingredientsTypes.appendChild(ele);
 
   let deleteBtn = document.createElement("button");
   deleteBtn.setAttribute("type", "button");
   deleteBtn.innerHTML = "X"
   deleteBtn.className = "info-delete-btn";
-  frag.appendChild(deleteBtn);
   deleteBtn.addEventListener("click", deleteLi);
+  ingredientsTypes.appendChild(deleteBtn);
 
+  frag.appendChild(ingredientsTypes);
   resultInfo.appendChild(frag);
   resultInfo.appendChild(plusBtn);
 }
@@ -41,8 +44,7 @@ for (i in analyzed__ingredients.name) {
 //--start-- 재료 삭제 버튼//
 function deleteLi(event) {
   const btn = event.target;
-  const prevBtn = btn.previousSibling;
-  btn.remove();
+  const prevBtn = btn.parentNode;
   prevBtn.remove();
 }
 //--end-- 재료 삭제 버튼//
@@ -56,23 +58,47 @@ function fnc() {
 
 
 function addIng() {
+  // enter 시 자동 submit기능 방지.
+  event.preventDefault()
   let currentValue = plusText.value;
+
+  let ingredientsTypes = document.createElement("div");
+  ingredientsTypes.className = "ingredients-types";
   let eles = document.createElement("input");
+  eles.className = "info";
   eles.setAttribute("type", "text");
   eles.setAttribute("name", "label");
   eles.setAttribute("value", currentValue);
-  frag.appendChild(eles);
+  ingredientsTypes.appendChild(eles);
 
   let deleteBtn = document.createElement("button");
   deleteBtn.setAttribute("type", "button");
   deleteBtn.innerHTML = "X"
   deleteBtn.className = "info-delete-btn";
   deleteBtn.addEventListener("click", deleteLi);
-  frag.appendChild(deleteBtn);
+  ingredientsTypes.appendChild(deleteBtn);
 
+  frag.appendChild(ingredientsTypes);
   resultInfo.appendChild(frag);
   resultInfo.appendChild(plusBtn);
 
   eles.readOnly = true;
   plusText.value = "";
+
+  let input = document.getElementById("plus__text").focus();
+}
+
+
+function openAddModal() {
+  let addModal = document.getElementById("add-modal-cover");
+  addModal.classList.remove("hidden");
+  let input = document.getElementById("plus__text").focus();
+  plusBtn.style.display = "none";
+}
+
+function closeAddModal() {
+  let addModal = document.getElementById("add-modal-cover");
+  addModal.classList.add("hidden");
+  plusBtn.style.display = "block";
+
 }

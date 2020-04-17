@@ -82,22 +82,33 @@
       <form id="result__form" action="/recomand" method="GET">
         <div class="result__container">
           <div class="result__img-container">
-            <img id="result__img" th:src=${uploadedImage}>
+            <!-- <img id="result__img" th:src=${uploadedImage}> -->
+            <img id="result__img" src="images/1.jpg">
           </div>
           <header id="result-header">분석결과</header>
           <div id="result-main">
             <div id="result__info">
 
             </div>
+            <div id="add-modal-cover" class="hidden">
+              <div id="add-modal">
+                <input autocomplete="off" id="plus__text" type="text" placeholder="추가하실 재료를 입력해주세요!"
+                  onKeypress="javascript:if(event.keyCode==13) {addIng()}">
+                <button id="plus__text-add" onclick="addIng()">
+                  <i class="fas fa-check"></i>
+                </button>
+                <div onclick="closeAddModal()" id="close__text-add">
+                  <i class="fas fa-times"></i>
+                </div>
+              </div>
+            </div>
           </div>
-          <div id="info-plus-btn">+</div>
+          <div onclick="openAddModal()" id="info-plus-btn">+</div>
+          <button id="next-btn">레시피 추천받기!</button>
         </div>
-        <button id="next-btn" type="submit">다음</button>
       </form>
+
       <!--end img__container-->
-      <input id="plus__text" type="text" placeholder="추가하실 재료를 입력해주세요!"
-        onKeypress="javascript:if(event.keyCode==13) {addIng()} autocomplete:disable">
-      <button onclick="addIng()">재료 추가하기</button>
     </div>
     <!--end--메인컨텐츠-->
 
@@ -110,16 +121,15 @@
   </div>
   <!--end--페이지 전체 컨테이너-->
 
-  <!--start--VanillaJS-->
+
   <script src="js/main.js"></script>
-  <!-- <script src="js/resultCheck.js" th:inline="javascript"> -->
   <script th:inline="javascript">
     /*<![CDATA[*/
     var label = /*[[${label}]]*/ "label";
     /*]]>*/
   </script>
   <script src="js/resultCheck.js"></script>
-  <!--end--VanillaJS-->
+
 </body>
 
 </html>

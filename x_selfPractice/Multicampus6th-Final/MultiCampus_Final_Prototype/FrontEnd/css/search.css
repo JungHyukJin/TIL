@@ -74,11 +74,17 @@
   padding: 10px;
 }
 
+.about__menu>.recipe-image {
+  width: 190px;
+  height: 190px;
+  border-radius: 5px;
+}
+
 .about__menu {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .about__menu>h1 {
@@ -88,12 +94,6 @@
 
 .about__menu>span {
   font-size: 17px;
-}
-
-.menu__list-image {
-  width: 190px;
-  height: 190px;
-  border-radius: 5px;
 }
 
 /*--end--메뉴 리스트 */

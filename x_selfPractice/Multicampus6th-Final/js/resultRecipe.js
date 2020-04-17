@@ -21,7 +21,16 @@ let recipe__info = [
     "기니디리미비시",
     "파이널빨리끝나라",
   ],
-  ['https://recipe1.ezmember.co.kr/cache/recipe/2020/03/09/ae6d6feb537a4536b1661cc799a83fec1.gif', 'https://recipe1.ezmember.co.kr/cache/recipe/2020/03/09/5857629c27f35ed5cba88751d03848841.jpg', 'https://recipe1.ezmember.co.kr/cache/recipe/2020/03/09/0dcc14cedf0b011a72f3a5df1fbe5cd01.jpg', 'https://recipe1.ezmember.co.kr/cache/recipe/2020/03/09/26cdf2358aaad905ffa1f82c770caf1d1.gif', 'https://recipe1.ezmember.co.kr/cache/recipe/2020/03/09/cd499683b4e17b2f963e61c98a169c0a1.gif', 'https://recipe1.ezmember.co.kr/cache/recipe/2020/03/09/c74c95403f3042720e550ec38a67c3d91.jpg', 'https://recipe1.ezmember.co.kr/cache/recipe/2020/03/09/a0545c271ceb6ca4423bef519f9135971.gif', 'https://recipe1.ezmember.co.kr/cache/recipe/2020/03/09/b74826852c7d5dcded23f4f3e9612fec1.gif']
+  [
+    "https://recipe1.ezmember.co.kr/cache/recipe/2020/03/09/ae6d6feb537a4536b1661cc799a83fec1.gif",
+    "https://recipe1.ezmember.co.kr/cache/recipe/2020/03/09/5857629c27f35ed5cba88751d03848841.jpg",
+    "https://recipe1.ezmember.co.kr/cache/recipe/2020/03/09/0dcc14cedf0b011a72f3a5df1fbe5cd01.jpg",
+    "https://recipe1.ezmember.co.kr/cache/recipe/2020/03/09/26cdf2358aaad905ffa1f82c770caf1d1.gif",
+    "https://recipe1.ezmember.co.kr/cache/recipe/2020/03/09/cd499683b4e17b2f963e61c98a169c0a1.gif",
+    "https://recipe1.ezmember.co.kr/cache/recipe/2020/03/09/c74c95403f3042720e550ec38a67c3d91.jpg",
+    "https://recipe1.ezmember.co.kr/cache/recipe/2020/03/09/a0545c271ceb6ca4423bef519f9135971.gif",
+    "https://recipe1.ezmember.co.kr/cache/recipe/2020/03/09/b74826852c7d5dcded23f4f3e9612fec1.gif",
+  ],
 ];
 
 let frag = document.createDocumentFragment();
@@ -65,7 +74,9 @@ for (i in recipe__info[10]) {
   recipeSteps.className = "recipe-steps";
   let step = document.createElement("span");
   step.className = "cookStep";
-  step.innerHTML = `<div class="stepNumber">${[Number(i) + 1]}.</div> ${recipe__info[10][i]}`;
+  step.innerHTML = `<div class="stepNumber">${[Number(i) + 1]}.</div> ${
+    recipe__info[10][i]
+  }`;
   let stepImg = document.createElement("img");
   stepImg.src = recipe__info[11][i];
   recipeSteps.appendChild(step);
@@ -77,5 +88,5 @@ for (i in recipe__info[10]) {
 
 let stepsEnd = document.createElement("div");
 stepsEnd.id = "steps-end";
-stepsEnd.innerHTML = "- - - END - - -"
+stepsEnd.innerHTML = "- - - END - - -";
 recipeStepsInfo.appendChild(stepsEnd);
