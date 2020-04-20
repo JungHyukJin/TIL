@@ -30,7 +30,7 @@
         <div class="login__layout-form">
           <!--start--로그인 폼-->
 
-          <form class="loginForm" id="login-form" action="/login" method="POST">
+          <form onsubmit="return validate()" class="loginForm" id="login-form" action="/login" method="POST">
             <h1>오늘 뭐 해먹지?</h1>
             <input id="email-id" type="email" name="email" placeholder="이메일을 입력해주세요." autofocus autocomplete="off">
             <input id="email-password" type="password" name="password" placeholder="비밀번호를 입력해주세요." autocomplete="off">
@@ -78,6 +78,7 @@
 
   <script src="js/main.js"></script>
   <script src="js/autofocus.js"></script>
+  <script src="js/login.js"></script>
 
 </body>
 

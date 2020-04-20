@@ -28,23 +28,25 @@
         <div class="login__layout-form">
 
           <!--start--회원가입 폼-->
-          <form clss="signUpForm" id="signUp-form" action="signUp" method="POST" enctype="multipart/form-data">
+          <form name="join" class="signUpForm" id="signUp-form" action="signUp" method="POST"
+            onsubmit="return validate()" enctype="multipart/form-data">
             <h1>회원가입</h1>
             <p>"오늘 뭐 해먹지?"에 가입하고,</p>
             <p>남은 재료들을 이용한 특별한 요리에 도전해보세요!</p>
-            <input id="email-id" name="email" type="email" placeholder="사용하실 이메일을 입력해주세요." autocomplete="off" autofocus>
-            <input id="email-password" name="password" type="password" placeholder="사용하실 비밀번호를 입력해주세요."
+            <input id="email-id" name="mail" type="email" placeholder="사용하실 이메일을 입력해주세요." autocomplete="off" autofocus>
+            <input id="email-password" name="password1" type="password" placeholder="사용하실 비밀번호를 입력해주세요."
               autocomplete="off">
-            <input id="email-password-check" type="password" placeholder="사용하실 비밀번호를 다시 한 번 입력해주세요." autocomplete="off">
-            <input id="name" name="name" type="text" placeholder="이름을 입력해주세요." autocomplete="off" autofocus>
+            <input id="email-password-check" name="password2" type="password" placeholder="사용하실 비밀번호를 다시 한 번 입력해주세요."
+              autocomplete="off">
+            <!-- <input id="name" name="name" type="text" placeholder="이름을 입력해주세요." autocomplete="off" autofocus> -->
             <div id="signUp-check">
-              <input type="checkbox">
+              <input id="sign-up-checkbox" type="checkbox">
               <span id="policy-modal__open">이용약관</span>과<span id="privacy-modal__open">개인정보취급방침</span>에 동의합니다.
             </div>
             <button id="login-button" type="submit">
               회원가입
             </button>
-            <button id="google-signUp-btn" type="submit">
+            <button id="google-signUp-btn">
               <img src="images/google-logo.png">
               <span style="padding-left: 10px; padding-right: 20px;">
                 구글로 회원가입
