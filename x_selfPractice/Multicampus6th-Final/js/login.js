@@ -1,9 +1,9 @@
+//--start--이메일 비밀번호 정규표현식
 function validate() {
   let re2 = /^(?=.*\d)(?=.*[a-zA-Z])[0-9a-zA-Z]{8,10}$/;
   // 패스워드가 적합한지 검사할 정규식
   let re = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
   // 이메일이 적합한지 검사할 정규식
-
 
   let email = document.getElementById("email-id");
   let emailPassword = document.getElementById("email-password");
@@ -32,3 +32,4 @@ function check(way, what, message) {
   what.focus();
   return false;
 }
+//--end--이메일 비밀번호 정규표현식

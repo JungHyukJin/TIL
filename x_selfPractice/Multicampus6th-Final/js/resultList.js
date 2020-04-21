@@ -5,7 +5,7 @@ let recipeLists, i = "";
 recipeLists = [
   [
     "123",
-    "비오는날 막걸리 안주에 딱인 감자김치전",
+    "비오는날 막걸리 안주에 딱인 감자김치전비오는날 막걸리 안주에 딱인 감자김치전비오는날 막걸리 안주에 딱인 감자김치전비오는날 막걸리 안주에 딱인 감자김치전비오는날 막걸리 안주에 딱인 감자김치전비오는날 막걸리 안주에 딱인 감자김치전",
     "4인분",
     "20분",
     "초보자",
@@ -108,14 +108,9 @@ let frag = document.createDocumentFragment();
 
 
 for (i in recipeLists) {
-  const recipeID = document.createElement("span")
-  recipeID.innerText = recipeLists[i][0];
-  recipeID.id = "recipe-Id-Number";
-  recipeID.style.display = "none";
 
   let menuList = document.createElement("li");
   menuList.className = "menu__list";
-  menuList.addEventListener("click", getId);
   let aboutMenu = document.createElement("div");
   aboutMenu.className = "about__menu";
 
@@ -127,22 +122,39 @@ for (i in recipeLists) {
   let recipeMinor = document.createElement("span");
   recipeMinor.id = "recipe-minor-ingredients"
   recipeMinor.innerHTML = `<span style="font-weight:bold";>ㅇ부재료:</span> ${recipeLists[i][7]}`;
-  let recipeImg = document.createElement("div");
-  recipeImg.style.backgroundImage = `url('${recipeLists[i][9]}')`
+
+
+
+
+  let recipeImgContainer = document.createElement("div")
+  recipeImgContainer.className = "recipe-img-container"
+  let recipeImgCover = document.createElement("div")
+  recipeImgCover.className = "recipe-img-cover"
+
+  let recipeImg = document.createElement("img");
+  recipeImgContainer.appendChild(recipeImgCover);
+  recipeImgCover.appendChild(recipeImg);
+
+  recipeImg.src = recipeList[i].img_complete;
   recipeImg.className = "menu__list-image";
 
+  let bmImgCover = document.createElement("div");
+  bmImgCover.className = "bm-img-cover"
   let bmImg = document.createElement("img");
+  bmImgCover.appendChild(bmImg);
   bmImg.className = "bookmark-image"
   bmImg.src = "images/bm-logo.png";
   bmImg.addEventListener("click", addBookmark);
-  recipeImg.appendChild(bmImg);
+  recipeImgContainer.appendChild(bmImgCover);
+
+
 
   menuList.appendChild(recipeID);
   menuList.appendChild(aboutMenu);
   aboutMenu.appendChild(recipeTitle);
   aboutMenu.appendChild(recipeMain);
   aboutMenu.appendChild(recipeMinor);
-  menuList.appendChild(recipeImg);
+  menuList.appendChild(recipeImgContainer);
 
 
   frag.appendChild(menuList);
