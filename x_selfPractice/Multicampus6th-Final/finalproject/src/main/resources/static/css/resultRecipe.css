@@ -7,8 +7,6 @@
   justify-content: center;
   align-items: center;
   margin-top: 5px;
-  margin-right: 5px;
-  margin-left: 5px;
   padding: 5px;
   box-shadow: 0 5px 10px rgba(24, 13, 13, 0.4);
   max-width: 800px;
@@ -24,8 +22,9 @@
 }
 
 #result-img {
-  width: 500px;
-  height: 400px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 400px;
   border-radius: 10px;
   margin: auto;
 }
@@ -39,7 +38,7 @@
   margin-top: 30px;
   padding: 0px 15px 5px;
   width: 100%;
-  line-height: 40px;
+  line-height: 45px;
 }
 
 .recipeDescription {
@@ -49,7 +48,7 @@
   padding: 0 10px;
   margin-top: 30px;
   color: grey;
-  line-height: 25px;
+  line-height: 28px;
 }
 
 #recipe-info {
@@ -115,8 +114,9 @@
 }
 
 #main-ingredients-info {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   margin-top: 5px;
+  line-height: 25px;
 }
 
 #minor-ingredients-info {
@@ -164,12 +164,12 @@
   margin-left: 30px;
 }
 
-.cookStep {
+.cook-Step {
   font-size: 20px;
   line-height: 25px;
 }
 
-.stepNumber {
+.step-Number {
   font-weight: bold;
   font-size: 25px;
   margin-top: 15px;

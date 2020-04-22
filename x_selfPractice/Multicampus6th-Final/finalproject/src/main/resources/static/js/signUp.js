@@ -1,3 +1,8 @@
+window.onload = function () {
+  const input = document.getElementById("name").focus();
+}
+
+
 // 이용약관
 const PolicyModalOpenButton = document.getElementById("policy-modal__open");
 const PolicyModal = document.querySelector(".policy__modal");
@@ -45,6 +50,14 @@ function validate() {
   let emailPassword = document.getElementById("email-password");
   let emailPasswordCheck = document.getElementById("email-password-check");
   let signUpCheckbox = document.getElementById("sign-up-checkbox");
+  let name = document.getElementById("name");
+
+  if (name.value == "") {
+    alert("이름을 입력해 주세요");
+    name.focus();
+    return false;
+  }
+
 
   if (email.value == "") {
     alert("이메일을 입력해 주세요");

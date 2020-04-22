@@ -87,7 +87,7 @@
 .about__menu>h1 {
   font-size: 23px;
   font-weight: bold;
-  line-height: 25px;
+  line-height: 30px;
 }
 
 .about__menu>span {
@@ -111,15 +111,15 @@
 /*--end--메뉴 리스트 */
 
 #recipe-main-ingredients {
-  margin-top: 10px;
   margin-bottom: 8px;
   font-size: 19px;
+  line-height: 25px;
 }
 
 #recipe-minor-ingredients {
-  margin-top: 10px;
   margin-bottom: 8px;
   font-size: 19px;
+  line-height: 25px;
 }
 
 

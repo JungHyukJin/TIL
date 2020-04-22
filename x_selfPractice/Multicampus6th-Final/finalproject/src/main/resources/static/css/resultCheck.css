@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: auto;
   background-color: #fffdf9;
   border: 10px solid #fffdf9;
   border-radius: 5px;
@@ -17,6 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: auto;
   max-width: 550px;
   max-height: 450px;
   margin-top: 15px;
@@ -36,8 +37,7 @@
 }
 
 #result__img {
-  width: 500px;
-  height: 400px;
+  width: 100%;
   border-radius: 5px;
 }
 
@@ -56,7 +56,6 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  /* justify-content: left; */
   width: 100%;
 }
 
@@ -71,13 +70,14 @@
 }
 
 .info {
-  font-size: 30px;
+  font-size: 22px;
   border: none;
   width: auto;
   max-width: 115px;
   text-align: center;
   cursor: pointer;
   background: transparent;
+  padding-left: 2px;
 }
 
 .info-delete-btn {
@@ -87,7 +87,6 @@
   height: 30px;
   border: none;
   background: transparent;
-  /* margin-right: 10px; */
   padding-right: 20px;
 }
 
@@ -117,6 +116,8 @@
 
 #result__form {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #next-btn {

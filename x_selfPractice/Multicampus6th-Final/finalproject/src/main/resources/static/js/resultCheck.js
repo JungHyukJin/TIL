@@ -71,6 +71,7 @@ function addIng() {
   eles.setAttribute("value", currentValue);
   ingredientsTypes.appendChild(eles);
 
+
   let deleteBtn = document.createElement("button");
   deleteBtn.setAttribute("type", "button");
   deleteBtn.innerHTML = "X"
@@ -87,7 +88,6 @@ function addIng() {
 
   let input = document.getElementById("plus__text").focus();
 }
-
 
 function openAddModal() {
   let addModal = document.getElementById("add-modal-cover");

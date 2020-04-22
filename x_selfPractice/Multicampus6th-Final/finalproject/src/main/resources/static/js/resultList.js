@@ -14,10 +14,10 @@ for (i in recipeList) {
   recipeTitle.innerHTML = recipeList[i].title;
   let recipeMain = document.createElement("span");
   recipeMain.id = "recipe-main-ingredients";
-  recipeMain.innerHTML = `<span style="font-weight:bold";>ㅇ주재료:</span> ${recipeList[i].main}`;
+  recipeMain.innerHTML = `<span style="font-weight:bold";>ㅇ주재료:<br></span> ${recipeList[i].main.replace("[", "").replace("]", "")}`;
   let recipeMinor = document.createElement("span");
   recipeMinor.id = "recipe-minor-ingredients";
-  recipeMinor.innerHTML = `<span style="font-weight:bold";>ㅇ부재료:</span> ${recipeList[i].minor}`;
+  recipeMinor.innerHTML = `<span style="font-weight:bold";>ㅇ부재료:<br></span> ${recipeList[i].minor.replace("[", "").replace("]", "")}`;
 
 
   let recipeImgContainer = document.createElement("div")

@@ -49,6 +49,13 @@
   background-color: aliceblue;
 }
 
+#name {
+  border: none;
+  padding-left: 20px;
+  font-size: 20px;
+  background-color: aliceblue;
+}
+
 #email-password,
 #email-password-check {
   border: none;
