@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGIN PAGE</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <style>
+  </style>
+</head>
+
+
+<body>
+
+
+  <!--start--페이지 전체 컨테이너-->
+  <div id='main__container'>
+    <!--start--헤더 고정-->
+    <header id="main__header">
+      <!-- main.js 참고 -->
+    </header>
+    <!--end--헤더 고정-->
+
+    <!--start--메인컨텐츠-->
+    <div id="main__contents">
+      <div class="login__layout">
+        <div class="login__layout-form">
+          <!--start--로그인 폼-->
+
+          <form onsubmit="return validate()" class="loginForm" id="login-form" action="/login" method="POST">
+            <h1>오늘 뭐 해먹지?</h1>
+            <input id="email-id" type="email" name="email" placeholder="이메일을 입력해주세요." autofocus autocomplete="off">
+            <input id="email-password" type="password" name="password" placeholder="비밀번호를 입력해주세요." autocomplete="off">
+            <button id="login-button" type="submit">
+              로그인
+            </button>
+            <button id="google-login-btn" type="submit">
+              <img src="images/google-logo.png">
+              <span style="padding-right: 15px;">
+                구글로 로그인
+              </span>
+            </button>
+          </form>
+          <!--end--로그인 폼-->
+
+          <hr>
+          <!--아이디비번찾기모달창으로 만들기!-->
+          <div id="user-help">
+            <span id="password-find"><a href="">
+                아이디/비번 찾기
+              </a>
+            </span>
+            <span id="go-to-signUp">
+              아직 계정이 없으신가요?
+              <a href="/signUp_page">
+                회원가입!
+              </a>
+            </span>
+          </div>
+          <!--아이디비번찾기모달창으로 만들기!-->
+
+        </div>
+      </div>
+    </div>
+    <!--end--메인컨텐츠-->
+
+    <!--start--푸터-->
+    <footer id="main__footer">
+      @"추천해주는 세끼" Corp. All right reserved.
+    </footer>
+    <!--end--푸터-->
+
+  </div>
+  <!--end--페이지 전체 컨테이너-->
+
+  <script src="/js/main.js"></script>
+  <script src="/js/autofocus.js"></script>
+  <script src="/js/login.js"></script>
+
+</body>
+
+</html>

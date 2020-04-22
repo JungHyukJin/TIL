@@ -1,0 +1,62 @@
+let frag = document.createDocumentFragment();
+let resultRecipeInfo = document.getElementById("result-recipe-info");
+
+let recipeImg = document.createElement("img");
+recipeImg.id = "result-img";
+recipeImg.src = recipe.img_complete;
+
+let recipeHeader = document.createElement("header");
+recipeHeader.className = "recipeTitle";
+recipeHeader.innerHTML = recipe.title;
+
+let recipeDescription = document.createElement("p");
+recipeDescription.className = "recipeDescription";
+recipeDescription.innerHTML = `" ${recipe.description} "`;
+
+let servingInfo = document.querySelector(".serving-info");
+servingInfo.innerHTML = recipe.size;
+
+let timeInfo = document.querySelector(".time-info");
+timeInfo.innerHTML = recipe.time;
+
+let difficultyInfo = document.querySelector(".difficulty-info");
+difficultyInfo.innerHTML = recipe.level;
+
+let mainIngredientsInfo = document.querySelector(".main-ingredients-info");
+mainIngredientsInfo.innerHTML = `<span style="font-weight: bold">ㅇ주재료 :</span> ${recipe.main}`;
+
+let minorIngredientInfo = document.querySelector(".minor-ingredients-info");
+minorIngredientInfo.innerHTML = `<span style="font-weight: bold">ㅇ부재료 :</span> ${recipe.minor}`;
+frag.appendChild(recipeImg);
+frag.appendChild(recipeHeader);
+frag.appendChild(recipeDescription);
+resultRecipeInfo.appendChild(frag);
+
+const recipeStepsInfo = document.getElementById("recipe-steps-info");
+
+recipe__info = recipe.step.split("', '")
+recipe__img = recipe.img.split("', '")
+for (i in recipe__info) {
+  console.log(recipe__info[i].replace("[","").replace("]","").replace("'",""))
+  console.log(recipe__img[i].replace("[","").replace("]","").replace("'",""))
+  recipeStepsInfo.id = "recipe-steps-info";
+  let recipeSteps = document.createElement("div");
+  recipeSteps.className = "recipe-steps";
+  let step = document.createElement("span");
+  step.className = "cookStep";
+  step.innerHTML = `<div class="stepNumber">${[Number(i) + 1]}.</div> ${
+    recipe__info[i].replace("[","").replace("]","").replace("'","")
+  }`;
+  let stepImg = document.createElement("img");
+  stepImg.src = recipe__img[i].replace("[","").replace("]","").replace("'","");
+  recipeSteps.appendChild(step);
+  recipeSteps.appendChild(stepImg);
+
+  frag.appendChild(recipeSteps);
+  recipeStepsInfo.appendChild(frag);
+}
+
+let stepsEnd = document.createElement("div");
+stepsEnd.id = "steps-end";
+stepsEnd.innerHTML = "- - - END - - -";
+recipeStepsInfo.appendChild(stepsEnd);
