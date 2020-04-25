@@ -4,6 +4,11 @@ body {
   height: 150vh;
 }
 
+#main__footer {
+  text-align: center;
+
+}
+
 .main-logo {
   top: 0;
   height: 130px;

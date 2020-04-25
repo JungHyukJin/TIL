@@ -79,6 +79,13 @@ input::placeholder {
   border: none;
   font-size: 20px;
   background: lightskyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#google-login-btn>img {
+  margin-right: 5px;
 }
 
 #google-login-btn:hover {

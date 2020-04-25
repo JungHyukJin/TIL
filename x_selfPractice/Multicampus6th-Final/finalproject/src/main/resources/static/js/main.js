@@ -51,7 +51,7 @@ mainHeader.innerHTML =
       <span class="nav__icon">
         <a href="/login">
           <i class="far fa-user"></i>
-          <span>로그인</span>
+          <span>사용자</span>
         </a>
       </span>
     </div>`;
