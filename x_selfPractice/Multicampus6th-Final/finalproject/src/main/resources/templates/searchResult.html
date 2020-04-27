@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RECIPE LIST PAGE</title>
+  <title>SEARCH RESULT PAGE</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
   <link rel="stylesheet" href="/css/styles.css">
 </head>
@@ -24,14 +24,25 @@
 
       <!--start--서치컨텐츠-->
       <div id="search__contents">
+        <input id="recipe__search" type="text" placeholder="요리를 검색해보세요!" onkeyup="enterkey()">
         <div id="recipe__category">
-          <span>레시피 목록</span>
+          <span>레시피</span>
         </div>
         <ul id="menu__lists">
           <!-- 메뉴 리스트 들어오는 곳 -->
         </ul>
       </div>
       <!--end--서치컨텐츠-->
+      <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+      </div>
     </div>
     <!--end--메인컨텐츠-->
 
@@ -50,7 +61,7 @@
     var recipeList = /*[[${recipeList}]]*/ "recipe";
     /*]]>*/
   </script>
-  <script src="/js/resultList.js"></script>
+  <script src="/js/searchResult.js"></script>
   <script src="/js/bookmark.js"></script>
 
 </body>

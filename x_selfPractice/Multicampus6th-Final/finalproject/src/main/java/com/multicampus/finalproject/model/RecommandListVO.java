@@ -17,4 +17,5 @@ public class RecommandListVO {
     private String step;
     private String img;
     private String ingre_main_oneline;
+    private int bookmarkIsCheck;
 }

@@ -226,7 +226,8 @@ if __name__ == '__main__':
     labels = ['chilli', 'egg', 'pork meat', 'potato', 'pa', 'onion', 'carrot', 'cucumber']
     vectorize = HashingVectorizer()
 
-    engine = create_engine('mysql://root:1234@localhost:3307/testdb?charset=utf8', convert_unicode=True,encoding='UTF-8')
+    engine = create_engine('mysql://root:1234@localhost:3307/testDB?charset=utf8', convert_unicode=True,encoding='UTF-8')
+    # engine = create_engine('mysql://JKS:12345678@sts.c2yt44rkrmcp.us-east-2.rds.amazonaws.com:3306/finalproject?charset=utf8', convert_unicode=True,encoding='UTF-8')
     conn = engine.connect()
     data = pd.read_sql_table('recipe', conn)
     data = data.fillna(0)

@@ -31,4 +31,12 @@ public class UserInfoService {
     public RecommandListVO readRecipe(int recipeId){
         return userMapper.readRecipe(recipeId);
     }
+
+    public int getSearchPageNum(String keyword){
+        return userMapper.getSearchPageNum(keyword);
+    }
+
+    public List<RecommandListVO> searchRecipeList(int page,String keyword){
+        return userMapper.searchRecipeList(page,keyword);
+    }
 }

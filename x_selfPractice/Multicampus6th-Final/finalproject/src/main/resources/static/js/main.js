@@ -1,14 +1,12 @@
 const mainHeader = document.getElementById("main__header");
 
 //--start--헤더 전체
-mainHeader.innerHTML =
-  ` <div id="mySidenav" class="sidenav">
+mainHeader.innerHTML = ` <div id="mySidenav" class="sidenav">
       <a class="nav-menu-6" href="/">HOME</a>
       <a class="nav-menu-1" href="/search">SEARCH</a>
-      <a class="nav-menu-2" href="/guide">GUIDE</a>
       <a class="closebtn" onclick="closeNav()">&times;</a>
       <a class="nav-menu-3" href="/camera">CAMERA</a>
-      <a class="nav-menu-4" href="/bookmark">BOOKMARK</a>
+      <a onclick="bookmarkOpenModal()" class="nav-menu-4">BOOKMARK</a>
       <a class="nav-menu-5" href="/user/info">USER</a>
     </div>
 
@@ -42,11 +40,9 @@ mainHeader.innerHTML =
           <span>촬영</span>
         </a>
       </span>
-      <span class="nav__icon">
-        <a href="/bookmark">
+      <span onclick="bookmarkOpenModal()" class="nav__icon">
           <i class="far fa-bookmark"></i>
           <span>북마크</span>
-        </a>
       </span>
       <span class="nav__icon">
         <a href="/login">
@@ -56,8 +52,6 @@ mainHeader.innerHTML =
       </span>
     </div>`;
 //--end--헤더 전체
-
-
 
 // 햄버거 메뉴바 열기
 function openNav() {

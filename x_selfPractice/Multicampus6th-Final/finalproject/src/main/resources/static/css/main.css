@@ -1,7 +1,7 @@
 body {
   font-family: "omniGothic";
   transition: background-color .5s;
-  height: 150vh;
+  /* height: 150vh; */
 }
 
 #main__footer {
@@ -107,7 +107,7 @@ body {
 /* --- Menu-bar end--- */
 
 #main__header {
-  z-index: 998;
+  z-index: 800;
   top: 0;
   left: 0;
   right: 0;
@@ -140,7 +140,12 @@ body {
 
 .nav__icon {
   font-size: 20px;
-  margin-left: 30px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.nav__icon>span:hover {
+  font-weight: bold;
 }
 
 .nav__icon>a:hover {
@@ -177,6 +182,9 @@ body {
   font-weight: bold;
 }
 
+.sidenav>.nav-menu-4 {
+  cursor: pointer;
+}
 
 .sidenav>.closebtn {
   position: absolute;

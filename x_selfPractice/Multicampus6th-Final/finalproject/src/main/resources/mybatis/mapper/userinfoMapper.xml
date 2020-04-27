@@ -13,6 +13,10 @@
         SELECT authority_name FROM authority WHERE username = #{username}
     </select>
 
+    <select id="loadBookmark" parameterType="String" resultType="int">
+        SELECT recipeid FROM bookmark WHERE userID = #{userID}
+    </select>
+
     <select id="selectBookmark" parameterType="com.multicampus.finalproject.model.BookmarkVO" resultType="com.multicampus.finalproject.model.BookmarkVO">
         select * from bookmark where userID = #{userID, jdbcType = VARCHAR} and recipeID = #{recipeID}
     </select>
@@ -35,7 +39,7 @@
     </insert>
 
     <select id="readRecipeList" parameterType="java.util.ArrayList" resultType="com.multicampus.finalproject.model.RecommandListVO">
-        SELECT * FROM recipe WHERE id IN 
+        SELECT * FROM recipe WHERE id IN
         <foreach collection="list" item="item" separator="," open="(" close=")">
             #{item.value}
         </foreach>
@@ -44,9 +48,18 @@
             #{item}
         </foreach>
     </select>
-
     <select id="readRecipe" parameterType="Integer" resultType="com.multicampus.finalproject.model.RecommandListVO">
         SELECT * FROM recipe WHERE id = #{recipeId}
     </select>
+    <select id="isBookmark" resultType="Integer">
+        SELECT EXISTS (SELECT * from bookmark WHERE userid = #{userID} AND recipeid=#{recipeID})
+    </select>
 
+    <select id="searchRecipeList" resultType="com.multicampus.finalproject.model.RecommandListVO">
+        SELECT * FROM recipe WHERE title LIKE "%"#{keyword}"%" or "%"#{keyword} or #{keyword}"%" LIMIT #{page},10
+    </select>
+
+    <select id="getSearchPageNum" resultType="Integer">
+        SELECT COUNT(*) FROM recipe WHERE title LIKE "%"#{keyword}"%" or "%"#{keyword} or #{keyword}"%"
+    </select>
 </mapper>

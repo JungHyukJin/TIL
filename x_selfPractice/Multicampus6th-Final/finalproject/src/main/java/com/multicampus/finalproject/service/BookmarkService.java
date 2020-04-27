@@ -1,5 +1,9 @@
 package com.multicampus.finalproject.service;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 import com.multicampus.finalproject.model.BookmarkVO;
 import com.multicampus.finalproject.repository.UserMapper;
 
@@ -21,5 +25,10 @@ public class BookmarkService {
     public void deleteBookmark(BookmarkVO bookmarkVO){
         userMapper.deleteBookmark(bookmarkVO);
     }
-    
+    public ArrayList<Integer> loadBookmark(String userID){
+        return userMapper.loadBookmark(userID);
+    }
+    public int isBookmark(String userID , int recipeID){
+        return userMapper.isBookmark(userID, recipeID);
+    }
 }

@@ -1,46 +1,52 @@
 let resultForm = document.getElementById("result__form");
-let resultInfo = document.getElementById("result__info");
+let closeBtn = document.getElementById("close__text-add");
 const plusText = document.getElementById("plus__text");
 let plusBtn = document.getElementById("info-plus-btn");
-let closeBtn = document.getElementById("close__text-add");
+let resultInfo = document.getElementById("result__info");
 
-let frag = document.createDocumentFragment();
-//--start-- 재료 데이터 받는 곳//
-let analyzed__ingredients,
-  i,
-  ingredient__lists = "";
-
-analyzed__ingredients = {
-  name: label
-};
+resultCheckFunction();
 
 
-for (i in analyzed__ingredients.name) {
-  let ingredientsTypes = document.createElement("div");
-  ingredientsTypes.className = "ingredients-types";
-  let ele = document.createElement("input");
-  ele.readOnly = true;
-  ele.className = "info";
-  ele.setAttribute("type", "text");
-  ele.setAttribute("name", "label");
-  ele.setAttribute("value", analyzed__ingredients.name[i]);
-  ingredientsTypes.appendChild(ele);
+function resultCheckFunction() {
 
-  let deleteBtn = document.createElement("button");
-  deleteBtn.setAttribute("type", "button");
-  deleteBtn.innerHTML = "X"
-  deleteBtn.className = "info-delete-btn";
-  deleteBtn.addEventListener("click", deleteLi);
-  ingredientsTypes.appendChild(deleteBtn);
+  let frag = document.createDocumentFragment();
+  //--start-- 재료 데이터 받는 곳//
+  let analyzed__ingredients,
+    i,
+    ingredient__lists = "";
 
-  frag.appendChild(ingredientsTypes);
-  resultInfo.appendChild(frag);
-  resultInfo.appendChild(plusBtn);
+  analyzed__ingredients = {
+    name: label
+  };
+
+
+  for (i in analyzed__ingredients.name) {
+    let ingredientsTypes = document.createElement("div");
+    ingredientsTypes.className = "ingredients-types";
+    let ele = document.createElement("input");
+    ele.readOnly = true;
+    ele.className = "info";
+    ele.setAttribute("type", "text");
+    ele.setAttribute("name", "label");
+    ele.setAttribute("value", analyzed__ingredients.name[i]);
+    ingredientsTypes.appendChild(ele);
+
+    let deleteBtn = document.createElement("button");
+    deleteBtn.setAttribute("type", "button");
+    deleteBtn.innerHTML = "X"
+    deleteBtn.className = "info-delete-btn";
+    deleteBtn.addEventListener("click", deleteLi);
+    ingredientsTypes.appendChild(deleteBtn);
+
+    frag.appendChild(ingredientsTypes);
+    resultInfo.appendChild(frag);
+    resultInfo.appendChild(plusBtn);
+  }
+
+  //--end--재료 데이터 받는 곳//
+
+
 }
-
-//--end--재료 데이터 받는 곳//
-
-
 //--start-- 재료 삭제 버튼//
 function deleteLi(event) {
   const btn = event.target;
@@ -49,13 +55,19 @@ function deleteLi(event) {
 }
 //--end-- 재료 삭제 버튼//
 
-
-//--start-- 메인 재료 선정 - 미구현
-function fnc() {
-  console.log(this);
+function openAddModal() {
+  let addModal = document.getElementById("add-modal-cover");
+  addModal.classList.remove("hidden");
+  let input = document.getElementById("plus__text").focus();
+  plusBtn.style.display = "none";
 }
-//--end-- 메인 재료 선정 - 미구현
 
+function closeAddModal() {
+  let addModal = document.getElementById("add-modal-cover");
+  addModal.classList.add("hidden");
+  plusBtn.style.display = "block";
+
+}
 
 function addIng() {
   // enter 시 자동 submit기능 방지.
@@ -79,6 +91,7 @@ function addIng() {
   deleteBtn.addEventListener("click", deleteLi);
   ingredientsTypes.appendChild(deleteBtn);
 
+  let frag = document.createDocumentFragment();
   frag.appendChild(ingredientsTypes);
   resultInfo.appendChild(frag);
   resultInfo.appendChild(plusBtn);
@@ -87,18 +100,4 @@ function addIng() {
   plusText.value = "";
 
   let input = document.getElementById("plus__text").focus();
-}
-
-function openAddModal() {
-  let addModal = document.getElementById("add-modal-cover");
-  addModal.classList.remove("hidden");
-  let input = document.getElementById("plus__text").focus();
-  plusBtn.style.display = "none";
-}
-
-function closeAddModal() {
-  let addModal = document.getElementById("add-modal-cover");
-  addModal.classList.add("hidden");
-  plusBtn.style.display = "block";
-
 }
