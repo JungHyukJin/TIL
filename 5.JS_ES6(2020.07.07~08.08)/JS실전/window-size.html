@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coordinate</title>
+  <style>
+    body {
+      background-color: blakck;
+      /* overflow: hidden; */
+      /* 스크롤 막기 */
+    }
+
+    div {
+      width: 250px;
+      height: 250px;
+      background-color: blanchedalmond;
+      margin-bottom: 5px;
+      border-radius: 4px;
+    }
+
+    .special {
+      background-color: salmon;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div class="special"></div>
+  <div></div>
+  <div></div>
+  <script>
+    const special = document.querySelector(".special");
+    special.addEventListener('click', (event) => {
+      const rect = speical.getBoudingClientRect();
+      console.log(rect);
+      console.log(client.x)
+    })
+  </script>
+</body>
+
+</html>
