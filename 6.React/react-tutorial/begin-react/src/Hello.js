@@ -1,12 +1,18 @@
 import React from 'react';
 
-function Hello({ color, name }) {
+function Hello({ color, name, isSpecial }) {
   //
-  return <div style={{
-    color
-    // color: color 위에와 같음
-  }}> 안녕하세요!!! {name} </div>
+  return (
+    <div style={{
+      color
+    }}>
+      {isSpecial && <b>***</b>}
+      {/* 단순히 숨기고 보여줄 때는 &&연산자를 사용하고, */}
+      {/* 삼항연산자는 다른 결과를 보여줄 때 사용한다. */}
 
+      안녕하세요!!! {name}
+    </div>
+  );
 }
 
 Hello.defaultProps = {
