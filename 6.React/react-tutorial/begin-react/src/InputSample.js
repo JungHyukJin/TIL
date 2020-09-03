@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+// 1. useRef를 불러오고,
 
 function InputSample() {
   //
@@ -6,19 +7,16 @@ function InputSample() {
     name: '',
     nickname: '',
   });
+  const nameInput = useRef();
+  // 2. useRef를 호출해주고, 이것으로 만든 객체를
   const { name, nickname } = inputs;
 
   const onChange = (e) => {
     const { name, value } = e.target;
-    // e.target에서 name과 value를 추출하고,
 
     setInputs({
       ...inputs,
-      // spread문법
-      // 리액트에서 객체를 업데이트 하려면 기존의 객체를 복사해야 한다.
       [name]: value,
-      // name을 []대괄호로 감싸야 실제 name값이 무엇을 가리키고 있느냐에 따라
-      // 다른 key값이 변경된다. name값은 name이 될 수도 있고, nickname이 될 수도 있다.
     });
   };
 
@@ -27,11 +25,21 @@ function InputSample() {
       name: '',
       nickname: '',
     });
+    nameInput.current.focus();
+    // 4. 만든객체에다가 current를 사용하여 해당DOM을 가르키고 원하는 작업을 하면된다.
   };
 
   return (
     <div>
-      <input name="name" placeholder="이름" onChange={onChange} value={name} />
+      <input
+        name="name"
+        placeholder="이름"
+        onChange={onChange}
+        value={name}
+        ref={nameInput}
+        // 3. ref라는 값으로 원하는 DOM에다가 설정해주고,
+        //    나중에 해당 DOM을 선택하고 싶을 때는
+      />
       <input
         name="nickname"
         placeholder="별명"
