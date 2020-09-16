@@ -1,21 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-function User({ user, onRemove, onToggle }) {
+const User = React.memo(function User({ user, onRemove, onToggle }) {
   const { username, email, id, active } = user;
-
-  useEffect(() => {
-    console.log('user값이 설정됨');
-    console.log(user);
-    return () => {
-      console.log('user값이 바뀌기 전');
-      console.log(user);
-    };
-  }, [user]);
-  // useEffect의 함수는, deps값인 [user]가 설정되거나 변경될 때마다 호출이 된다.
-  // 처음 화면에 나타날 때에도 호출이 된다는 것을 알고있자.
-  // useEffect 함수에서 props로 받아온 값을 참조하거나, useState로 관리하고 있는 값을
-  // 참조하고 있는 경우에는 deps배열을 꼭 넣어주어야 한다.
-  // 넣지 않으면 오류가 나진 않지만, 경고가 뜬다.
 
   return (
     <div>
@@ -33,7 +19,7 @@ function User({ user, onRemove, onToggle }) {
       <button onClick={() => onRemove(id)}>삭제</button>
     </div>
   );
-}
+});
 
 function UserList({ users, onRemove, onToggle }) {
   //
@@ -51,4 +37,12 @@ function UserList({ users, onRemove, onToggle }) {
   );
 }
 
-export default UserList;
+export default React.memo(
+  UserList,
+  (prevProps, nextProps) => nextProps.users === prevProps.users
+);
+// 추가적으로 React.memo를 사용할 때, 두번째 parameter에 props비교 함수를 넣어줄 수 있다.
+// 전, 후의 props를 비교하여 true를 반환하면 리랜더링을 방지하고, false를 반환하면 리랜더링을 한다.
+// 하지만, props비교 함수를 사용하려면, 나머지 props가 정말 고정적이라 비교를 할 필요가 없는지 확인을 해야한다.
+// 예로, onToggle 함수에서 함수형 업데이트를 하지 않았다면, UserList함수에서 onToggle을 호출할 때
+// 해당 함수에서 최신상태의 users를 가르키고 있지 않기 때문에, 심각한 오류가 발생할 수 있다.

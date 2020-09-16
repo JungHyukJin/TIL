@@ -53,22 +53,22 @@ function App() {
       email,
     };
 
-    setUsers(users.concat(user))
+    setUsers(users => users.concat(user));
     setInputs({
       username: '',
       email: ''
     })
     nextId.current += 1;
-  }, [username, email, users]);
+  }, [username, email]);
 
   const onRemove = useCallback(id => {
     //
-    setUsers(users.filter(user => user.id !== id));
-  }, [users])
+    setUsers(users => users.filter(user => user.id !== id));
+  }, [])
 
   const onToggle = useCallback(id => {
-    setUsers(users.map(user => user.id === id ? { ...user, active: !user.active } : user));
-  }, [users]);
+    setUsers(users => users.map(user => user.id === id ? { ...user, active: !user.active } : user));
+  }, []);
 
   const count = useMemo(() => countActiveUsers(users), [users]);
 
@@ -78,7 +78,8 @@ function App() {
         username={username}
         email={email}
         onChange={onChange}
-        onCreate={onCreate} />
+        onCreate={onCreate}
+      />
       <UserList users={users} onRemove={onRemove} onToggle={onToggle} />
       <div>활성 사용자 수: {count} </div>
     </>
