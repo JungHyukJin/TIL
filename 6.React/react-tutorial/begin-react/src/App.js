@@ -2,7 +2,11 @@ import React, { useRef, useState } from 'react';
 import CreateUser from './CreateUser';
 import UserList from './UserList';
 
-
+function countActiveUsers(users) {
+  //
+  console.log('활성 사용자 수를 세는중...')
+  return users.filter(user => user.active).length;
+}
 
 function App() {
   //
@@ -50,7 +54,6 @@ function App() {
     }
 
     setUsers(users.concat(user))
-    // 추가
 
     setInputs({
       username: '',
@@ -63,15 +66,13 @@ function App() {
   const onRemove = id => {
     //
     setUsers(users.filter(user => user.id !== id));
-    // 제거
   }
 
   const onToggle = id => {
     setUsers(users.map(user => user.id === id ? { ...user, active: !user.active } : user));
-    // 배열에 있는 특정 아이템만 업데이트 할 때도 map함수를 사용할 수 있다.
-    // 기존의 user를 수정하는게 아니라, 새로운 객체를 만들어서 기존의 값들을 넣어주고,
-    // 특정 값을 덮어씌워주는 형태로 구현해야 한다.
   }
+
+  const count = countActiveUsers(users);
 
   return (
     <>
@@ -81,7 +82,9 @@ function App() {
         onChange={onChange}
         onCreate={onCreate} />
       <UserList users={users} onRemove={onRemove} onToggle={onToggle} />
+      <div>활성 사용자 수: {count} </div>
     </>
+
   );
 }
 
