@@ -1,25 +1,39 @@
-import React, { useState } from 'react';
-// react에서 useState라는 함수를 불러온다. 바뀌는 값을 관리할 수 있다.
+import React, { useReducer } from 'react';
+
+function reducer(state, action) {
+  // 결과값은 다음 상태여야 한다.
+  // state의 타입은 뭐든지 가능하다. (숫자, 문자열, 배열...)
+  switch (action.type) {
+    case 'INCREMENT':
+      return state + 1;
+    case 'DECREMENT':
+      return state - 1;
+    default:
+      throw new Error('Unhandled action');
+  }
+}
 
 function Counter() {
   //
-  const [number, setNumber] = useState(0);
-  // number라는 상태를 만들건데, 기본값은 0으로 하겠다.
-  // 숫자를 5로 바꾸면, 기본값이 5로 바뀐다.
+  const [number, dispatch] = useReducer(reducer, 0);
 
-  const increase = () => {
-    setNumber(prevNumber => prevNumber + 1);
+  const onIncrease = () => {
+    dispatch({
+      type: 'INCREMENT',
+    });
   };
 
-  const decrease = () => {
-    setNumber(n => n - 1);
+  const onDecrease = () => {
+    dispatch({
+      type: 'DECREMENT',
+    });
   };
 
   return (
     <div>
       <h1>{number}</h1>
-      <button onClick={increase}> +1 </button>
-      <button onClick={decrease}> -1 </button>
+      <button onClick={onIncrease}> +1 </button>
+      <button onClick={onDecrease}> -1 </button>
     </div>
   );
 }
