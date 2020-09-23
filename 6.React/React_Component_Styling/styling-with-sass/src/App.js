@@ -40,13 +40,24 @@ function App() {
         </Button>
       </div>
       <div className="buttons">
-        <Button size="large" fullWidth={true}>
+        <Button size="large" fullWidth={true} className="customized-button">
+          {/* className으로 따로 설정해주고, App.scss에서 스타일을 추가하면 된다. */}
           Button
         </Button>
         <Button size="large" color="gray" fullWidth>
           Button
         </Button>
-        <Button size="large" color="pink" fullWidth>
+        <Button
+          size="large"
+          color="pink"
+          fullWidth
+          onClick={() => {
+            console.log('click!');
+          }}
+          onMouseMove={() => {
+            console.log('Mouse Move!');
+          }}
+        >
           Button
         </Button>
       </div>
