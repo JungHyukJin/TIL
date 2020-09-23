@@ -1,5 +1,28 @@
 // 변수를 사용할 때는 $표시를 사용한다.
 $blue: #228be6;
+$gray: #495057;
+$pink: #f06595;
+
+@mixin button-color($color) {
+  // 반복되는 코드가 있다면 scss의 mixin코드를 사용하면 편리하다.
+  background: $color;
+  &:hover {
+    background: lighten($color, 10%);
+  }
+  &:active {
+    background: darken($color, 10%);
+  }
+
+  &.outline {
+    color: $color;
+    background: none;
+    border: 1px solid $color;
+    &:hover {
+      background: $color;
+      color: white;
+    }
+  }
+}
 
 .Button {
   color: white;
@@ -8,19 +31,46 @@ $blue: #228be6;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-
-  height: 2.25rem;
-  // 현재 브라우저 페이지의 기본폰트 사이즈에 기반하여 사이즈가 조정된다.
-  // 크롬은 기본 16px, 2.25rem이면 둘을 곱하면 36px이된다.
   padding-left: 1rem;
   padding-right: 1rem;
-  font-size: 1rem;
 
-  background: $blue;
-  &:hover {
-    background: lighten($blue, 10%);
+  &.large {
+    height: 3rem;
+    font-size: 1.25rem;
   }
-  &:active {
-    background: darken($blue, 10%);
+
+  &.medium {
+    height: 2.25rem;
+    font-size: 1rem;
+  }
+
+  &.small {
+    height: 1.75rem;
+    font-size: 0.875rem;
+  }
+
+  &.blue {
+    @include button-color($blue);
+  }
+
+  &.gray {
+    @include button-color($gray);
+  }
+
+  &.pink {
+    @include button-color($pink);
+  }
+
+  & + & {
+    margin-left: 1rem;
+  }
+
+  &.fullWidth {
+    width: 100%;
+    justify-content: center;
+    & + & {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
   }
 }
