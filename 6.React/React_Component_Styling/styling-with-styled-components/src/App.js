@@ -19,8 +19,11 @@ const palette = {
 function App() {
   return (
     <ThemeProvider theme={{ palette }}>
+      {/* ThemeProvider로 감싸주고 theme이라는 객체를 설정해주면 된다. */}
       <AppBlock>
         <Button>Button</Button>
+        <Button color="gray">Button</Button>
+        <Button color="pink">Button</Button>
       </AppBlock>
     </ThemeProvider>
   )
