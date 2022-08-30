@@ -1,4 +1,4 @@
-const hashPageTitle = "JS SPA ROUTING"
+const hashPageTitle = "JS SPA HASH ROUTING"
 
 const hashNavMenu = document.querySelector("#main .hashNav");
 hashNavMenu.addEventListener("click", (e) => {
