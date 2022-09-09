@@ -47,7 +47,7 @@ const AddUser = (props) => {
   return (
     // Card태그는 html 내장된 태그가 아니고 커스텀 태그이기 때문에
     // props를 넘겨 클래스를 적용해줘야 함.
-    <div>
+    <React.Fragment>
       {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler}/>}
       <Card className={classes.input}>
         <form onSubmit={addUSerHandler}>
@@ -68,7 +68,7 @@ const AddUser = (props) => {
           <Button type="submit">Add User</Button>
         </form>
       </Card>
-    </div>
+    </React.Fragment>
   );
 };
 
