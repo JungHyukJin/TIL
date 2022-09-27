@@ -12,4 +12,5 @@
 9. Custom Hooks
 10. Custom Http Hooks
 11. Handling Forms ( useInput )
-
+12. Redux Intro
+13. Redux
