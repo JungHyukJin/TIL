@@ -1,41 +1,37 @@
-import {createStore} from "redux";
+// import {createStore, combineReducers} from "redux";
+import {createSlice, configureStore} from '@reduxjs/toolkit';
 
-const initialState = {counter:0, showCounter:true}
+const initialState = {counter:0, showCounter:true};
 
-const counterReducer = (state = initialState, action) => {
-  if (action.type === "INCREMENT") {
-    // state.counter ++;
-    // return state;
-    // 위 방식으로 해도 동작하지만, redux를 사용할 때 절대로 해서는 안된다.
-    // 절대로 기존의 state를 변경해서는 안된다.
-    
-    // 반드시 아래처럼 새로운 state객체를 변환하여 항상 재정의 해야한다.
-    return{
-        counter: state.counter + 1,
-        showCounter: state.showCounter,
-    };
-  } 
-  if (action.type === "INCREASE") {
-    return{
-        counter: state.counter + action.amount,
-        showCounter: state.showCounter,
-    };
+const counterSlice = createSlice({
+  name:'counter',
+  initialState: initialState,
+  reducers: {
+    increment(state){ // 인자에 액션이 필요 없다.
+      state.counter++;
+      // redux toolkit과 createSlice함수를 사용하면, redux toolkit은 내부적으로 immer라는 다른 패키지를 사용하는데,
+      // 코드를 감지해서 자동으로 원래 있는 상태를 복제한다.
+      // 그 후 새로운 상태 객체를 생성하고, 다른 상태는 변경 할 수 없게 유지하고, 
+      // 사용자가 변경한 상태는 오버라이드한다.
+
+    }, 
+    decrement(state){
+      state.counter--;
+    },
+    increase(state, action){
+      // redux toolkit을 사용할 떄는 payload를 사용해아 함
+      state.counter = state.counter + action.payload;
+    },
+    toggleCounter(state){
+      state.showCounter = !state.showCounter;
+    },
   }
-  if (action.type === "DECREMENT") {
-    return {
-        counter: state.counter - 1,
-        showCounter: state.showCounter,
-    };
-  };
-  if (action.type === "TOGGLE") {
-    return {
-        counter: state.counter,
-        showCounter: !state.showCounter,
-    };
-  };
-  return state;
-};
+});
 
-const store = createStore(counterReducer);
+const store = configureStore({
+  reducer: counterSlice.reducer
+});
+
+export const counterActions = counterSlice.actions;
 
 export default store;

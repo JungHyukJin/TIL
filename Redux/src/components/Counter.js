@@ -3,6 +3,7 @@
 // useDispatch: React컴포넌트 내부에서 Redux로 action을 보낼 때 사용
 import { useSelector, useDispatch } from "react-redux";
 
+import {counterActions} from '../store/index';
 import classes from "./Counter.module.css";
 
 const Counter = () => {
@@ -13,17 +14,17 @@ const Counter = () => {
   const show = useSelector((state) => state.showCounter);
 
   const incrementHandler = () => {
-    dispatch({ type: "INCREMENT" });
+    dispatch(counterActions.increment());
   };
   const increaseHandler = () => {
-    dispatch({ type: "INCREASE", amount: 5 });
+    dispatch(counterActions.increase(2));
   };
   const decrementHandler = () => {
-    dispatch({ type: "DECREMENT" });
+    dispatch(counterActions.decrement());
   };
 
   const toggleCounterHandler = () => {
-    dispatch({ type: "TOGGLE" });
+    dispatch(counterActions.toggleCounter());
   };
 
   return (
@@ -32,7 +33,7 @@ const Counter = () => {
       {show && <div className={classes.value}>{counter}</div>}
       <div>
         <button onClick={incrementHandler}>INCREMENT</button>
-        <button onClick={increaseHandler}>INCREMENT +5</button>
+        <button onClick={increaseHandler}>INCREASE +5</button>
         <button onClick={decrementHandler}>DECREMENT</button>
       </div>
       <button onClick={toggleCounterHandler}>Toggle Counter</button>
