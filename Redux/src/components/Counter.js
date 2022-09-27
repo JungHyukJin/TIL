@@ -10,14 +10,14 @@ const Counter = () => {
   // Redux store에 action을 보낸다
   const dispatch = useDispatch();
   // redux에서 관리하는 state값으로 counter값을 가져온다.
-  const counter = useSelector((state) => state.counter);
-  const show = useSelector((state) => state.showCounter);
+  const counter = useSelector((state) => state.counter.counter);
+  const show = useSelector((state) => state.counter.showCounter);
 
   const incrementHandler = () => {
     dispatch(counterActions.increment());
   };
   const increaseHandler = () => {
-    dispatch(counterActions.increase(2));
+    dispatch(counterActions.increase(5));
   };
   const decrementHandler = () => {
     dispatch(counterActions.decrement());
