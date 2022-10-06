@@ -17,3 +17,5 @@
 14. Redux_Advanced
 15. Router
 16. Router_Advanced
+17. React_SPAprtc
+18. ReactTotalPractice
