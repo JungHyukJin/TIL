@@ -2,20 +2,20 @@
 스터디 재시작
 
 1. Vanilla JS - (SPA Routes)
-2. react-practice#1
-3. react-styling
-4. react-practice#2
-5. Effect, Reducers, Context
-6. Food Delivery App (+ 12.http request, response)
-7. Http Request, response
-8. Firebase
-9. Custom Hooks
-10. Custom Http Hooks
-11. Handling Forms ( useInput )
-12. Redux Intro
-13. Redux
-14. Redux_Advanced
-15. Router
-16. Router_Advanced
-17. React_SPAprtc
-18. ReactTotalPractice
+2. ReactSettings
+3. react-practice#1
+4. react-styling
+5. react-practice#2
+6. Effect, Reducers, Context
+7. Food Delivery App (+ 12.http request, response)
+8. Http Request, response
+9. Firebase
+10. Custom Hooks
+11. Custom Http Hooks
+12. Handling Forms ( useInput )
+13. Redux Intro
+14. Redux
+15. Redux_Advanced
+16. Router
+17. Router_Advanced
+18. React_SPAprt
