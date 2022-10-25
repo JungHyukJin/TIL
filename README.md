@@ -1,7 +1,6 @@
 2022.08.29
 스터디 재시작
 
-### 기본
 ```md
 React : 
 - A client-side JS library.
@@ -31,20 +30,3 @@ React :
 - 라우팅같은 핵심 기능을 포함하고 있음
 
 ```
-
-### 순서
-1. react-practice#1
-2. react-styling
-3. react-practice#2
-4. Effect, Reducers, Context
-5. Food Delivery App (+ http request, response)
-6. Http Request, response
-7. Custom Hooks
-8. Custom Http Hooks
-9. Handling Forms ( useInput )
-10. Redux Intro
-11. Redux
-12. Redux_Advanced
-13. Router
-14. Router_Advanced
-15. ReactTotalPractice
