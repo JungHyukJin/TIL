@@ -1,3 +1,5 @@
+```js
+// src - App.js
 import React, { useState, useEffect, useCallback } from 'react';
 
 import MoviesList from './components/MoviesList';
@@ -82,3 +84,8 @@ function App() {
 }
 
 export default App;
+```
+
+```js
+
+```
