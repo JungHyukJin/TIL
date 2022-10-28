@@ -1,5 +1,10 @@
+- 이미지
+
+<img src='./1.png' /> <br>
+
 ```js
 // src - App.js
+
 import React, { useState, useEffect, useCallback } from 'react';
 
 import MoviesList from './components/MoviesList';
@@ -22,6 +27,16 @@ function App() {
 
       const data = await response.json();
       // console.log('data', data);
+
+      // 더미
+      // const data = [
+      //   {
+      //     id: 1,
+      //     title: 'Title',
+      //     openingText: 'Opening',
+      //     releaseDate: 'ReleaseDate',
+      //   }
+      // ]
 
       const transformedMovies = [];
       for(const key in data){
@@ -87,5 +102,96 @@ export default App;
 ```
 
 ```js
+// src - components - AddMovie.js
 
+import React, { useRef } from 'react';
+
+import classes from './AddMovie.module.css';
+
+function AddMovie(props) {
+  const titleRef = useRef('');
+  const openingTextRef = useRef('');
+  const releaseDateRef = useRef('');
+
+  function submitHandler(event) {
+    event.preventDefault();
+
+    // could add validation here...
+
+    const movie = {
+      title: titleRef.current.value,
+      openingText: openingTextRef.current.value,
+      releaseDate: releaseDateRef.current.value,
+    };
+
+    props.onAddMovie(movie);
+  }
+
+  return (
+    <form onSubmit={submitHandler}>
+      <div className={classes.control}>
+        <label htmlFor='title'>Title</label>
+        <input type='text' id='title' ref={titleRef} />
+      </div>
+      <div className={classes.control}>
+        <label htmlFor='opening-text'>Opening Text</label>
+        <textarea rows='5' id='opening-text' ref={openingTextRef}></textarea>
+      </div>
+      <div className={classes.control}>
+        <label htmlFor='date'>Release Date</label>
+        <input type='text' id='date' ref={releaseDateRef} />
+      </div>
+      <button>Add Movie</button>
+    </form>
+  );
+}
+
+export default AddMovie;
 ```
+
+```js
+// src - components - Movie.js
+
+import React from 'react';
+
+import classes from './Movie.module.css';
+
+const Movie = (props) => {
+  return (
+    <li className={classes.movie}>
+      <h2>{props.title}</h2>
+      <h3>{props.releaseDate}</h3>
+      <p>{props.openingText}</p>
+    </li>
+  );
+};
+
+export default Movie;
+```
+
+```js
+// src - components - MovieList.js
+
+import React from 'react';
+
+import Movie from './Movie';
+import classes from './MoviesList.module.css';
+
+const MovieList = (props) => {
+  return (
+    <ul className={classes['movies-list']}>
+      {props.movies.map((movie) => (
+        <Movie
+          key={movie.id}
+          title={movie.title}
+          releaseDate={movie.release}
+          openingText={movie.openingText}
+        />
+      ))}
+    </ul>
+  );
+};
+
+export default MovieList;
+```
+

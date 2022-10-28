@@ -21,6 +21,16 @@ function App() {
       const data = await response.json();
       // console.log('data', data);
 
+      // 더미
+      // const data = [
+      //   {
+      //     id: 1,
+      //     title: 'Title',
+      //     openingText: 'Opening',
+      //     releaseDate: 'ReleaseDate',
+      //   }
+      // ]
+
       const transformedMovies = [];
       for(const key in data){
         transformedMovies.push({
