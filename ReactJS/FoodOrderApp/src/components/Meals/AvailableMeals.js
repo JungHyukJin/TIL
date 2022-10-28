@@ -13,12 +13,12 @@ const AvailableMeals = () => {
     const fetchMeals = async () => {
       setIsLoading(true);
       const response = await fetch(
-        "https://fooddeliverydatabase-7e769-default-rtdb.firebaseio.com/meals.json"
+        "https://foodorderapp-13eff-default-rtdb.firebaseio.com/meals.json"
       );
 
-      // if (!response.ok) {
-      //   throw new Error("Something went wrong!");
-      // }
+      if (!response.ok) {
+        throw new Error("Something went wrong!");
+      }
 
       const responseData = await response.json();
 
