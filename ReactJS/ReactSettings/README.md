@@ -4,7 +4,7 @@
 
 2-1. $ npm install
 or
-2-2. $ npm install -g yarn
+2-2. $ npm install global yarn
 
 3-1.
     npx create-react-app my-app
