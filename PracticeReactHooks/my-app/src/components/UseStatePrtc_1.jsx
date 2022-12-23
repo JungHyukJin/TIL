@@ -14,7 +14,7 @@ export default function UseStatePrtc_1() {
 
   return (
     <div>
-      <h1>카운터 : {number}</h1>
+      <p>카운터 : {number}</p>
       <button onClick={increaseHandler}> + 1 </button>
     </div>
   );
