@@ -1,5 +1,6 @@
 import "./App.css";
 import Nav from "./components/Nav";
+import ReactMemo from "./components/ReactMemo";
 import UseCallbackPrtc_1 from "./components/UseCallbackPrtc_1";
 import UseCallbackPrtc_2 from "./components/UseCallbackPrtc_2";
 import UseContextPrtc_1 from "./components/UseContextPrtc_1";
@@ -46,9 +47,10 @@ function App() {
             <UseCallbackPrtc_2 />
             <h2>9. useReducer : </h2>
             <UseReducerPrtc_1 />
+            <UseReducerPrtc_2 />
           </>
         )}
-        <UseReducerPrtc_2 />
+        <ReactMemo />
       </div>
     </UserContext.Provider>
   );
