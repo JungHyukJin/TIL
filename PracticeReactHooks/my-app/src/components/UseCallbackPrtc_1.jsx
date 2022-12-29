@@ -18,6 +18,7 @@ export default function UseCallbackPrtc_1() {
 
   return (
     <div>
+      <p>8. useCallback :</p>
       <input
         type="number"
         value={number}

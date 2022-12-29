@@ -35,6 +35,7 @@ export default function UseMemoPrtc_1() {
 
   return (
     <div>
+      <p>7. useMemo : </p>
       <p>어려운 계산기</p>
       <input onChange={hardHandler} type="number" />
       <span> + 10000 = {hardSum}</span>

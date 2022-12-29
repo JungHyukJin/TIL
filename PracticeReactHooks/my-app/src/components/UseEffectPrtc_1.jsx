@@ -14,6 +14,7 @@ export default function UseEffectPrtc_1() {
 
   return (
     <div>
+        <p>3. useEffect : </p> 
         <input type="text" value={input} onChange={inputChangeHandler}/>
         <p>input : {input}</p>
         <p>number : {number}</p>

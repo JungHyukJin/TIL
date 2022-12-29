@@ -10,6 +10,7 @@ export default function CustomeHooksPrtc_1() {
 
   return (
     <div>
+      <p>11. customHooks : </p>
         <p>useInput</p>
         <input type="text" value={inputValue} onChange={handleChange} />
         <button onClick={handleSubmit}>확인</button>

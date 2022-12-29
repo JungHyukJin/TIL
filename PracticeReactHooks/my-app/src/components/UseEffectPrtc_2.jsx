@@ -9,6 +9,7 @@ export default function UseEffectPrtc_2() {
     }
   return (
     <div>
+      <p>4. cleanUp</p>
       {time && <Timer />}
       <button onClick={timerHandler}>타이머</button>
     </div>

@@ -14,6 +14,7 @@ export default function UseContextPrtc_1() {
 
   return (
     <div>
+      <p>6. useContext : </p>
       {`누구님, 안녕하세요!!! 만나서 반갑습니다...!`}<br/>
       {`${user}님, 안녕하세요!!! ${comment}`}
     </div>

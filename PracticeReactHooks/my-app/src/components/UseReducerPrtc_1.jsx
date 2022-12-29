@@ -30,6 +30,7 @@ export default function UseReducerPrtc_1() {
 
   return (
     <div>
+      <p>9. useReducer :</p>
       <p>useReducer 은행</p>
       <p>잔고 : {money} 원</p>
       <input

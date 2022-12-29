@@ -45,6 +45,7 @@ export default function ReactMemo() {
 
   return (
     <div style={{ border: "2px solid navy", padding: "10px" }}>
+      <p>10. react.Memo :</p>
       <h1>부모</h1>
       <p>age:{parentAge}</p>
       <button onClick={increaseParentAge}>부모 나이 증가</button>
