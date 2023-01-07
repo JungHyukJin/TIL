@@ -35,6 +35,9 @@ export default function Nav() {
         <Link to="/useParams">
           <p> useParams : </p>
         </Link>
+        <Link to="/backdrop">
+          <p> Backdrop : </p>
+        </Link>
       </div>
     </>
   );

@@ -21,6 +21,7 @@ import NotFound from "./pages/NotFound";
 import Root from "./pages/Root";
 import UseParams_2 from "./components/UseParams_2";
 import UseParams_1 from "./components/UseParams_1";
+import Backdrop from "./components/Backdrop";
 
 const user = "정혁진";
 const comment = "환영합니다..!";
@@ -112,6 +113,10 @@ const router = createBrowserRouter([
       {
         path: "/useParams/:params",
         element: <UseParams_2 />,
+      },
+      {
+        path: "/backdrop",
+        element: <Backdrop />,
       },
     ],
   },
